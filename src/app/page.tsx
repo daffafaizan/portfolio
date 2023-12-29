@@ -1,6 +1,5 @@
-import Description from '@/components/description'
-import Intro from '@/components/intro'
-import Image from 'next/image'
+import Intro from "@/components/main/intro";
+import Description from "@/components/main/description";
 
 export default function Home() {
   return (
@@ -8,5 +7,5 @@ export default function Home() {
       <Intro />
       <Description />
     </main>
-  )
+  );
 }
