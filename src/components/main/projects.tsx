@@ -7,12 +7,12 @@ import todolist from "../../../public/Todolist/Shot (14).png";
 
 export default function Projects() {
   return (
-    <div className="min-h-screen w-full sm:w-4/5 flex flex-col justify-center items-center px-2 py-4">
+    <div className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center px-2 py-4">
       <div className="w-full text-left">
         <span className="text-3xl sm:text-5xl font-semibold">Projects</span>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <div className="relative w-full lg:w-2/3 lg:h-96 mt-4 sm:mt-6">
+        <div className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={todolist}
@@ -35,7 +35,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="relative w-full lg:w-1/3 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        <div className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={pomodoro}
