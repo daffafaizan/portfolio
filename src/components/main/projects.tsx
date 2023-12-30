@@ -24,7 +24,7 @@ export default function Projects() {
                 Todolist
               </span>
               <a
-                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-green-400 text-base sm:text-xl font-medium text-white rounded-xl"
+                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
                 href="https://todolist.daffafaizan.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -47,7 +47,7 @@ export default function Projects() {
                 Pomodoro
               </span>
               <a
-                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-green-400 text-base sm:text-xl font-medium text-white rounded-xl"
+                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
                 href="https://pomotimer.daffafaizan.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -70,7 +70,7 @@ export default function Projects() {
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
               <span className="text-base sm:text-xl font-semibold">Invite</span>
               <a
-                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-green-400 text-base sm:text-xl font-medium text-white rounded-xl"
+                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
                 href="https://rpl-a12.et.r.appspot.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -93,7 +93,7 @@ export default function Projects() {
                 Nubengine
               </span>
               <a
-                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-green-400 text-base sm:text-xl font-medium text-white rounded-xl"
+                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
                 href="http://nubengine.annavaws.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -106,7 +106,7 @@ export default function Projects() {
         </div>
       </div>
       <div className="w-full px-2 mt-4 sm:mt-6">
-        <button className="border border-black rounded-full px-3 py-2 text-base sm:text-xl">
+        <button className="border border-black bg-white hover:bg-[#45b8ac] hover:text-white hover:border-white duration-150 rounded-full px-3 py-2 text-base sm:text-xl">
           See more projects.
         </button>
       </div>
