@@ -9,7 +9,9 @@ export default function Projects() {
   return (
     <div className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center px-2 py-4">
       <div className="w-full text-left">
-        <span className="text-3xl sm:text-5xl font-semibold">Projects</span>
+        <span className="text-3xl sm:text-5xl lg:text-7xl font-semibold">
+          Projects
+        </span>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
         <div className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
@@ -17,6 +19,7 @@ export default function Projects() {
             className="rounded-2xl h-full object-cover"
             src={todolist}
             alt="Todolist"
+            quality={100}
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
@@ -40,6 +43,7 @@ export default function Projects() {
             className="rounded-2xl h-full object-cover"
             src={pomodoro}
             alt="Pomodoro"
+            quality={100}
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
@@ -65,6 +69,7 @@ export default function Projects() {
             className="rounded-2xl h-full object-cover"
             src={invite}
             alt="Invite"
+            quality={100}
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
@@ -86,6 +91,7 @@ export default function Projects() {
             className="rounded-2xl h-full object-cover"
             src={nubengine}
             alt="Nubengine"
+            quality={100}
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
@@ -106,7 +112,7 @@ export default function Projects() {
         </div>
       </div>
       <div className="w-full px-2 mt-4 sm:mt-6">
-        <button className="border border-black bg-white hover:bg-[#45b8ac] hover:text-white hover:border-white duration-150 rounded-full px-3 py-2 text-base sm:text-xl">
+        <button className="border border-black bg-white hover:bg-[#45b8ac] hover:text-white hover:border-white duration-150 rounded-full px-3 py-2 lg:px-5 lg:py-4 text-base sm:text-xl lg:text-3xl">
           See more projects.
         </button>
       </div>
