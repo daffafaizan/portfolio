@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HiOutlineExternalLink } from "react-icons/hi";
 import pomodoro from "../../../public/Pomodoro/Shot.png";
 import invite from "../../../public/Invite/Scene 1.png";
 import nubengine from "../../../public/Nubengine/MacBook-Pro-16 (1).png";
@@ -22,12 +23,13 @@ export default function Projects() {
           <div className="flex flex-row justify-between items-center gap-2">
             <span className="font-semibold">Todolist</span>
             <a
-              className="px-2 py-1 bg-green-400 font-medium text-white rounded-xl"
+              className="flex flex-row justify-between items-center px-2 py-1 gap-1 bg-green-400 font-medium text-white rounded-xl"
               href="https://todolist.daffafaizan.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span>Open</span>
+              <HiOutlineExternalLink />
             </a>
           </div>
         </div>
@@ -44,12 +46,13 @@ export default function Projects() {
           <div className="flex flex-row justify-between items-center gap-2">
             <span className="font-semibold">Pomodoro</span>
             <a
-              className="px-2 py-1 bg-green-400 font-medium text-white rounded-xl"
+              className="flex flex-row justify-between items-center px-2 py-1 gap-1 bg-green-400 font-medium text-white rounded-xl"
               href="https://pomotimer.daffafaizan.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span>Open</span>
+              <HiOutlineExternalLink />
             </a>
           </div>
         </div>
@@ -66,12 +69,13 @@ export default function Projects() {
           <div className="flex flex-row justify-between items-center gap-2">
             <span className="font-semibold">Invite</span>
             <a
-              className="px-2 py-1 bg-green-400 font-medium text-white rounded-xl"
+              className="flex flex-row justify-between items-center px-2 py-1 gap-1 bg-green-400 font-medium text-white rounded-xl"
               href="https://rpl-a12.et.r.appspot.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span>Open</span>
+              <HiOutlineExternalLink />
             </a>
           </div>
         </div>
@@ -88,12 +92,13 @@ export default function Projects() {
           <div className="flex flex-row justify-between items-center gap-2">
             <span className="font-semibold">Nubengine</span>
             <a
-              className="px-2 py-1 bg-green-400 font-medium text-white rounded-xl"
+              className="flex flex-row justify-between items-center px-2 py-1 gap-1 bg-green-400 font-medium text-white rounded-xl"
               href="http://nubengine.annavaws.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span>Open</span>
+              <HiOutlineExternalLink />
             </a>
           </div>
         </div>
