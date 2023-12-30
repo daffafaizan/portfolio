@@ -9,7 +9,9 @@ export default function Navbar() {
         </span>
       </div>
       <div>
-        <Bars3Icon className="block h-6 w-6" />
+        <button>
+          <Bars3Icon className="block h-6 w-6" />
+        </button>
       </div>
     </div>
   );

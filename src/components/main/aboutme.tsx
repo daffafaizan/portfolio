@@ -6,11 +6,13 @@ export default function AboutMe() {
       </div>
       <div className="w-full text-justify px-2 mt-4">
         <span className="text-lg">
-          Daffa is a dedicated individual currently in his third year as a
-          Computer Science Undergraduate student at the esteemed University of
-          Indonesia. His educational journey has ignited a keen interest in
-          Software Engineering, with a specific focus on Front End Development.
-          Daffa approaches his studies and work with passion and enthusiasm.
+          Daffa, currently a third-year Computer Science Undergraduate at the
+          University of Indonesia, has developed a strong interest in Software
+          Engineering, specifically focusing on Front End Development. Known for
+          his passionate and enthusiastic approach to both his studies and work,
+          Daffa is committed to continuously expanding his skill set. While
+          specializing in Front End Development, he is also actively delving
+          into Back End Development to achieve a well-rounded proficiency.
         </span>
       </div>
       <div className="w-full px-2 mt-4">
