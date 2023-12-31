@@ -10,8 +10,8 @@ const inter = Mulish({
 });
 
 export const metadata: Metadata = {
-  title: "Daffa M. Faizan - Software Engineer",
-  description: "A Software Engineer",
+  title: "Daffa M. Faizan - Full-stack Developer",
+  description: "A Full-stack Developer",
 };
 
 export default function RootLayout({

@@ -9,10 +9,10 @@ export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
   return (
     <>
-      <div className="fixed flex flex-row items-center justify-between top-0 z-20 w-full px-7 py-5 bg-white">
+      <div className="fixed flex flex-row items-center justify-between top-0 h-16 z-20 w-full px-7 bg-white">
         <div className="flex flex-col justify-center items-center">
           <a href="/">
-            <span className="text-sm sm:text-xl">
+            <span className="text-xl">
               dmf<span className="text-[#45b8ac]">.</span>{" "}
             </span>
           </a>
@@ -21,36 +21,48 @@ export default function Navbar() {
           {pathName !== "/" ? (
             <div>
               <a href="/">
-                <span>Home</span>
+                <span className="hover:text-gray-500">Home</span>
               </a>
             </div>
           ) : (
             <></>
           )}
-          <div>
-            <a href="/projects">
-              <span>Projects</span>
-            </a>
-          </div>
-          <div>
-            <a href="/blog">
-              <span>Blog</span>
-            </a>
-          </div>
-          <div>
-            <a href="/me">
-              <span>About me</span>
-            </a>
-          </div>
+          {pathName !== "/projects" ? (
+            <div>
+              <a href="/projects">
+                <span className="hover:text-gray-500">Projects</span>
+              </a>
+            </div>
+          ) : (
+            <></>
+          )}
+          {pathName !== "/blog" ? (
+            <div>
+              <a href="/blog">
+                <span className="hover:text-gray-500">Blog</span>
+              </a>
+            </div>
+          ) : (
+            <></>
+          )}
+          {pathName !== "/me" ? (
+            <div>
+              <a href="/me">
+                <span className="hover:text-gray-500">About me</span>
+              </a>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
         <div className="md:hidden flex flex-col justify-center items-center">
           {showNavbar ? (
             <button onClick={() => setShowNavbar(!showNavbar)}>
-              <XMarkIcon className="block h-6 w-6 sm:h-8 sm:w-8" />
+              <XMarkIcon className="block h-8 w-8" />
             </button>
           ) : (
             <button onClick={() => setShowNavbar(!showNavbar)}>
-              <Bars3Icon className="block h-6 w-6 sm:h-8 sm:w-8" />
+              <Bars3Icon className="block h-8 w-8" />
             </button>
           )}
         </div>
@@ -64,27 +76,39 @@ export default function Navbar() {
           {pathName !== "/" ? (
             <div>
               <a href="/">
-                <span>Home</span>
+                <span className="hover:text-gray-500">Home</span>
               </a>
             </div>
           ) : (
             <></>
           )}
-          <div>
-            <a href="/projects">
-              <span>Projects</span>
-            </a>
-          </div>
-          <div>
-            <a href="/blog">
-              <span>Blog</span>
-            </a>
-          </div>
-          <div>
-            <a href="/me">
-              <span>About me</span>
-            </a>
-          </div>
+          {pathName !== "/projects" ? (
+            <div>
+              <a href="/projects">
+                <span className="hover:text-gray-500">Projects</span>
+              </a>
+            </div>
+          ) : (
+            <></>
+          )}
+          {pathName !== "/blog" ? (
+            <div>
+              <a href="/blog">
+                <span className="hover:text-gray-500">Blog</span>
+              </a>
+            </div>
+          ) : (
+            <></>
+          )}
+          {pathName !== "/me" ? (
+            <div>
+              <a href="/me">
+                <span className="hover:text-gray-500">About me</span>
+              </a>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </>

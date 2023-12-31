@@ -4,7 +4,7 @@ export default function Intro() {
       <div className="w-full flex flex-col justify-center text-3xl sm:text-5xl lg:text-7xl text-left gap-y-1 sm:gap-y-3 px-2">
         <span className="text-gray-300">University of Indonesia</span>
         <span className="font-semibold">Daffa M. Faizan</span>
-        <span className="text-gray-300">Software Engineer</span>
+        <span className="text-gray-300">Full-stack Developer</span>
       </div>
     </div>
   );
