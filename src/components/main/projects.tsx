@@ -112,9 +112,14 @@ export default function Projects() {
         </div>
       </div>
       <div className="w-full px-2 mt-4 sm:mt-6">
-        <button className="border border-black bg-white hover:bg-[#45b8ac] hover:text-white hover:border-white duration-150 rounded-full px-3 py-2 lg:px-5 lg:py-4 text-base sm:text-xl lg:text-3xl">
-          See more projects.
-        </button>
+        <form action="/projects">
+          <button
+            type="submit"
+            className="border border-black bg-white hover:bg-[#45b8ac] hover:text-white hover:border-white duration-150 rounded-full px-3 py-2 lg:px-5 lg:py-4 text-base sm:text-xl lg:text-3xl"
+          >
+            See more projects.
+          </button>
+        </form>
       </div>
     </div>
   );

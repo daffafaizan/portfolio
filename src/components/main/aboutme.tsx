@@ -18,9 +18,14 @@ export default function AboutMe() {
         </span>
       </div>
       <div className="w-full mt-4 sm:mt-6">
-        <button className="border border-black bg-white hover:bg-[#45b8ac] hover:text-white hover:border-white duration-150 rounded-full px-3 py-2 lg:px-5 lg:py-4 text-base sm:text-xl lg:text-3xl">
-          Get to know me.
-        </button>
+        <form action="/me">
+          <button
+            type="submit"
+            className="border border-black bg-white hover:bg-[#45b8ac] hover:text-white hover:border-white duration-150 rounded-full px-3 py-2 lg:px-5 lg:py-4 text-base sm:text-xl lg:text-3xl"
+          >
+            Get to know me.
+          </button>
+        </form>
       </div>
     </div>
   );
