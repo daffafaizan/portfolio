@@ -66,7 +66,7 @@ export default function Projects() {
         </div>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <div className="relative w-full lg:w-1/3 lg:h-96 mt-4 sm:mt-6">
+        <div className="relative w-full lg:w-5/12 lg:h-96 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={invite}
@@ -89,7 +89,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="relative w-full lg:w-2/3 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        <div className="relative w-full lg:w-7/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={nubengine}
