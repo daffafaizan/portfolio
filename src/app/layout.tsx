@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Mulish, Poppins } from "next/font/google";
 import "./global.css";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Mulish({
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Daffa M. Faizan - Software Engineer",

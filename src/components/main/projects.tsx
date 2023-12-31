@@ -24,9 +24,7 @@ export default function Projects() {
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
-              <span className="text-base sm:text-xl font-semibold">
-                Todolist
-              </span>
+              <span className="text-base sm:text-xl font-medium">Todolist</span>
               <a
                 className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
                 href="https://todolist.daffafaizan.com"
@@ -49,9 +47,7 @@ export default function Projects() {
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
-              <span className="text-base sm:text-xl font-semibold">
-                Pomodoro
-              </span>
+              <span className="text-base sm:text-xl font-medium">Pomodoro</span>
               <a
                 className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
                 href="https://pomotimer.daffafaizan.com"
@@ -76,7 +72,7 @@ export default function Projects() {
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
-              <span className="text-base sm:text-xl font-semibold">Invite</span>
+              <span className="text-base sm:text-xl font-medium">Invite</span>
               <a
                 className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
                 href="https://rpl-a12.et.r.appspot.com"
@@ -99,7 +95,7 @@ export default function Projects() {
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
-              <span className="text-base sm:text-xl font-semibold">
+              <span className="text-base sm:text-xl font-medium">
                 Nubengine
               </span>
               <a
@@ -115,7 +111,7 @@ export default function Projects() {
           </div>
         </div>
       </div>
-      <div className="w-full px-2 mt-4 sm:mt-6">
+      <div className="w-full mt-4 sm:mt-6">
         <form action="/projects">
           <button
             type="submit"

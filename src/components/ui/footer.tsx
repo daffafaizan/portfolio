@@ -12,7 +12,7 @@ export default function Footer() {
           <br />
           <span>All rights reserved.</span>
         </div>
-        <div className="flex flex-row justify-center items-center gap-4">
+        <div className="flex flex-row justify-center items-center gap-4 md:gap-6 md:text-xl">
           <a href="https://github.com/daffafaizan" target="__blank">
             <FiGithub />
           </a>
