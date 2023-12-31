@@ -4,9 +4,11 @@ export default function Navbar() {
   return (
     <div className="fixed flex flex-row items-center justify-between top-0 z-20 w-full px-7 py-5 bg-white">
       <div className="flex flex-col justify-center items-center">
-        <span className="text-sm sm:text-xl">
-          dmf<span className="text-[#45b8ac]">.</span>{" "}
-        </span>
+        <a href="/">
+          <span className="text-sm sm:text-xl">
+            dmf<span className="text-[#45b8ac]">.</span>{" "}
+          </span>
+        </a>
       </div>
       <div>
         <button>
