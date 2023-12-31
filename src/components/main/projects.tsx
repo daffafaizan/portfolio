@@ -20,6 +20,7 @@ export default function Projects() {
             src={todolist}
             alt="Todolist"
             quality={100}
+            priority={true}
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
@@ -44,6 +45,7 @@ export default function Projects() {
             src={pomodoro}
             alt="Pomodoro"
             quality={100}
+            priority={true}
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
@@ -70,6 +72,7 @@ export default function Projects() {
             src={invite}
             alt="Invite"
             quality={100}
+            priority={true}
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
@@ -92,6 +95,7 @@ export default function Projects() {
             src={nubengine}
             alt="Nubengine"
             quality={100}
+            priority={true}
           />
           <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
             <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
