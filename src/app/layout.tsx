@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Mulish, Poppins } from "next/font/google";
 import "./global.css";
+import { Mulish } from "next/font/google";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 
@@ -26,7 +26,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Navbar />
+
         {children}
+
         <Footer />
       </body>
     </html>

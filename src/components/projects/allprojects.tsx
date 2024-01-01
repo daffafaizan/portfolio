@@ -54,6 +54,11 @@ export default function AllProjects() {
                     Tailwind
                   </span>
                 </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Netlify
+                  </span>
+                </div>
               </div>
               <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
                 <span>Todolist</span>
@@ -123,6 +128,11 @@ export default function AllProjects() {
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
                     Tailwind
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Netlify
                   </span>
                 </div>
               </div>
@@ -352,6 +362,11 @@ export default function AllProjects() {
                     Tailwind
                   </span>
                 </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Netlify
+                  </span>
+                </div>
               </div>
               <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
                 <span>Daffa's</span>
@@ -421,6 +436,11 @@ export default function AllProjects() {
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
                     Vim
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Netlify
                   </span>
                 </div>
               </div>
