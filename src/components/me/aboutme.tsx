@@ -27,13 +27,13 @@ export default function AboutMe() {
           into Back End Development to achieve a well-rounded proficiency.
         </span>
         <span className="mt-4 sm:mt-6 text-md sm:text-lg">
-          Proficient in programming languages such as Java, Python, JavaScript,
-          and TypeScript, Daffa showcases versatility in various frameworks,
-          including React, Next, Spring Boot, and Django. Driven by a hunger for
-          knowledge, he is determined to contribute significantly to the dynamic
-          field of Computer Science. Daffa's combination of curiosity and
-          dedication positions him on a compelling journey towards becoming a
-          skilled and innovative Software Engineer.
+          Proficient in programming languages such as Java, Python, Go,
+          JavaScript, and TypeScript, Daffa showcases versatility in various
+          frameworks, including React, Next, Spring Boot, and Django. Driven by
+          a hunger for knowledge, he is determined to contribute significantly
+          to the dynamic field of Computer Science. Daffa's combination of
+          curiosity and dedication positions him on a compelling journey towards
+          becoming a skilled and innovative Software Engineer.
         </span>
       </div>
     </div>
