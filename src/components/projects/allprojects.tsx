@@ -10,6 +10,7 @@ import portodaffa from "../../../public/Portfolio/Dark (1).png";
 import portofahd from "../../../public/Portfolio/Dark (3).png";
 
 export default function AllProjects() {
+  const [showNubengine, setShowNubengine] = useState(false);
   const [showPortoDaffa, setShowPortoDaffa] = useState(false);
   const [showPortoFahd, setShowPortoFahd] = useState(false);
   return (
@@ -92,6 +93,50 @@ export default function AllProjects() {
           </div>
         </div>
         <div className="relative w-full lg:w-7/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+          {showNubengine ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowNubengine(!showNubengine)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Python
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Django
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Tailwind
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl text-white">
+                <span>Nubengine</span>
+                <span>Medical Document</span>
+                <span>Search Engine</span>
+              </div>
+              <div className="hidden absolute lg:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>A project for the</span>
+                <span>Information Retrieval class</span>
+                <span>utilizing TF-IDF for indexing</span>
+                <span>and ir-datasets.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl">
+              <button onClick={() => setShowNubengine(!showNubengine)}>
+                <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
           <Image
             className="rounded-2xl h-full object-cover"
             src={nubengine}
