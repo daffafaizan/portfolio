@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Image from "next/image";
+import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import pomodoro from "../../../public/Pomodoro/Shot.png";
 import invite from "../../../public/Invite/Scene 1.png";
@@ -8,6 +10,7 @@ import portodaffa from "../../../public/Portfolio/Dark (1).png";
 import portofahd from "../../../public/Portfolio/Dark (3).png";
 
 export default function AllProjects() {
+  const [showPortoFahd, setShowPortoFahd] = useState(false);
   return (
     <div className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center mt-16 px-2 pb-4">
       <div className="w-full text-left">
@@ -138,9 +141,54 @@ export default function AllProjects() {
           </div>
         </div>
         <div className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
-          <div className="absolute w-full h-full rounded-2xl bg-black">
-            test
-          </div>
+          {showPortoFahd ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowPortoFahd(!showPortoFahd)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Typescript
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Next.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Tailwind
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Vim
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl text-white">
+                <span>Fahd's</span>
+                <span>Portfolio Website</span>
+              </div>
+              <div className="hidden absolute lg:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>For my brother</span>
+                <span>A platform to share his</span>
+                <span>achievements, experiences,</span>
+                <span>and express himself.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl">
+              <button onClick={() => setShowPortoFahd(!showPortoFahd)}>
+                <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
           <Image
             className="rounded-2xl h-full object-cover"
             src={portofahd}
