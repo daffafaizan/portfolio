@@ -503,7 +503,7 @@ export default function AllProjects() {
               </a>
             </div>
             <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
-              <span>Let's connect</span>
+              <span>Ready to code</span>
             </div>
             <div className="absolute flex flex-col top-5 right-5 p-3 text-sm sm:text-lg md:text-xl text-right break-normal text-white">
               <span>My to-do list is begging for partners.</span>
