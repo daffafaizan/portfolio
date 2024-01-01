@@ -31,58 +31,78 @@ const tools = [
   },
   {
     id: 7,
+    title: "CSS",
+    icon: "vscode-icons:file-type-css",
+  },
+  {
+    id: 8,
     title: "Spring Boot",
     icon: "devicon:spring",
   },
   {
-    id: 8,
+    id: 9,
     title: "Django",
     icon: "vscode-icons:file-type-django",
   },
   {
-    id: 9,
+    id: 10,
     title: "React.js",
     icon: "devicon:react",
   },
   {
-    id: 10,
+    id: 11,
     title: "Next.js",
     icon: "teenyicons:nextjs-solid",
   },
   {
-    id: 11,
+    id: 12,
     title: "Express.js",
     icon: "skill-icons:expressjs-light",
   },
   {
-    id: 12,
+    id: 13,
     title: "PostgreSQL",
     icon: "logos:postgresql",
   },
   {
-    id: 13,
+    id: 14,
     title: "MongoDB",
     icon: "logos:mongodb-icon",
   },
   {
-    id: 14,
+    id: 15,
     title: "GCP",
     icon: "skill-icons:gcp-light",
   },
   {
-    id: 15,
+    id: 16,
     title: "Tailwind",
     icon: "vscode-icons:file-type-tailwind",
   },
   {
-    id: 16,
+    id: 17,
     title: "Bootstrap",
     icon: "logos:bootstrap",
   },
   {
-    id: 17,
+    id: 18,
     title: "Git",
     icon: "devicon:git",
+  },
+  // {
+  //   id: 19,
+  //   title: "Docker",
+  //   icon: "skill-icons:docker",
+  // },
+  {
+    id: 20,
+    title: "Vim",
+    icon: "logos:vim",
+  },
+  {
+    id: 21,
+    title: "Postman",
+    icon: "logos:postman-icon",
   },
 ];
 
