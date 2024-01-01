@@ -18,42 +18,26 @@ export default function Navbar() {
           </a>
         </div>
         <div className="hidden md:flex flex-row justify-center items-center text-xl gap-6">
-          {pathName !== "/" ? (
-            <div>
-              <a href="/">
-                <span className="hover:text-gray-500">Home</span>
-              </a>
-            </div>
-          ) : (
-            <></>
-          )}
-          {pathName !== "/projects" ? (
-            <div>
-              <a href="/projects">
-                <span className="hover:text-gray-500">Projects</span>
-              </a>
-            </div>
-          ) : (
-            <></>
-          )}
-          {pathName !== "/blog" ? (
-            <div>
-              <a href="/blog">
-                <span className="hover:text-gray-500">Blog</span>
-              </a>
-            </div>
-          ) : (
-            <></>
-          )}
-          {pathName !== "/me" ? (
-            <div>
-              <a href="/me">
-                <span className="hover:text-gray-500">About me</span>
-              </a>
-            </div>
-          ) : (
-            <></>
-          )}
+          <div>
+            <a href="/">
+              <span className="hover:text-gray-500">Home</span>
+            </a>
+          </div>
+          <div>
+            <a href="/projects">
+              <span className="hover:text-gray-500">Projects</span>
+            </a>
+          </div>
+          <div>
+            <a href="/blog">
+              <span className="hover:text-gray-500">Blog</span>
+            </a>
+          </div>
+          <div>
+            <a href="/me">
+              <span className="hover:text-gray-500">About me</span>
+            </a>
+          </div>
         </div>
         <div className="md:hidden flex flex-col justify-center items-center">
           {showNavbar ? (

@@ -10,6 +10,8 @@ import portodaffa from "../../../public/Portfolio/Dark (1).png";
 import portofahd from "../../../public/Portfolio/Dark (3).png";
 
 export default function AllProjects() {
+  const [showTodolist, setShowTodolist] = useState(false);
+  const [showPomodoro, setShowPomodoro] = useState(false);
   const [showInvite, setShowInvite] = useState(false);
   const [showNubengine, setShowNubengine] = useState(false);
   const [showPortoDaffa, setShowPortoDaffa] = useState(false);
@@ -23,6 +25,54 @@ export default function AllProjects() {
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
         <div className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
+          {showTodolist ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowTodolist(!showTodolist)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Typescript
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    React.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Vite.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Tailwind
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
+                <span>Todolist</span>
+              </div>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>A todolist that serves as a</span>
+                <span>final project for the GDSC Web</span>
+                <span>Development program featuring</span>
+                <span>priority flags, task editing, and</span>
+                <span>task creating capabilities.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl">
+              <button onClick={() => setShowTodolist(!showTodolist)}>
+                <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
           <Image
             className="rounded-2xl h-full object-cover"
             src={todolist}
@@ -46,6 +96,54 @@ export default function AllProjects() {
           </div>
         </div>
         <div className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+          {showPomodoro ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowPomodoro(!showPomodoro)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Typescript
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    React.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Vite.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Tailwind
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
+                <span>Pomodoro</span>
+                <span>Timer</span>
+              </div>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>A productivity tool utlizing</span>
+                <span>the pomodoro technique</span>
+                <span>featuring a soothing alarm</span>
+                <span>to keep you focused.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl">
+              <button onClick={() => setShowPomodoro(!showPomodoro)}>
+                <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
           <Image
             className="rounded-2xl h-full object-cover"
             src={pomodoro}
@@ -111,13 +209,12 @@ export default function AllProjects() {
                   </span>
                 </div>
               </div>
-              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl text-white">
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
                 <span>Invite</span>
-                <span>Team-matcher</span>
               </div>
-              <div className="hidden absolute lg:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
-                <span>A project for the</span>
-                <span>Software Engineering class</span>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>A team-matcher project for</span>
+                <span>the Software Engineering class</span>
                 <span>for students to find teams to</span>
                 <span>participate in a competition.</span>
               </div>
@@ -173,25 +270,23 @@ export default function AllProjects() {
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Tailwind
+                    GCP
                   </span>
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    GCP
+                    Tailwind
                   </span>
                 </div>
               </div>
-              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl text-white">
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
                 <span>Nubengine</span>
-                <span>Medical Document</span>
-                <span>Search Engine</span>
               </div>
-              <div className="hidden absolute lg:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
-                <span>A project for the</span>
-                <span>Information Retrieval class</span>
-                <span>utilizing TF-IDF for indexing</span>
-                <span>and ir-datasets.</span>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>A project for the Information</span>
+                <span>Retrieval class utlizing TF-IDF</span>
+                <span>for indexing and uses medical</span>
+                <span>datasets from ir-datasets.</span>
               </div>
             </div>
           ) : (
@@ -244,6 +339,11 @@ export default function AllProjects() {
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
+                    React.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
                     Vite.js
                   </span>
                 </div>
@@ -253,14 +353,14 @@ export default function AllProjects() {
                   </span>
                 </div>
               </div>
-              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl text-white">
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
                 <span>Daffa's</span>
-                <span>Portfolio Website</span>
+                <span>Portfolio</span>
               </div>
-              <div className="hidden absolute lg:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
-                <span>My first iteration</span>
-                <span>of a portfolio website</span>
-                <span>featuring projects, experiences,</span>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>My first iteration of a</span>
+                <span>portfolio website featuring</span>
+                <span>finished projects, experiences,</span>
                 <span>technologies, and socials.</span>
               </div>
             </div>
@@ -324,11 +424,11 @@ export default function AllProjects() {
                   </span>
                 </div>
               </div>
-              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl text-white">
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
                 <span>Fahd's</span>
-                <span>Portfolio Website</span>
+                <span>Portfolio</span>
               </div>
-              <div className="hidden absolute lg:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
                 <span>For my brother,</span>
                 <span>a platform to share his</span>
                 <span>achievements, experiences,</span>
