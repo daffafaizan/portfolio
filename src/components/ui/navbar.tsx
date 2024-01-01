@@ -13,29 +13,33 @@ export default function Navbar() {
         <div className="flex flex-col justify-center items-center">
           <a href="/">
             <span className="text-xl">
-              dmf<span className="text-[#45b8ac]">.</span>{" "}
+              dmf<span className="text-[#45b8ac] duration-150">.</span>{" "}
             </span>
           </a>
         </div>
         <div className="hidden md:flex flex-row justify-center items-center text-xl gap-6">
           <div>
             <a href="/">
-              <span className="hover:text-gray-500">Home</span>
+              <span className="hover:text-[#45b8ac] duration-150">Home</span>
             </a>
           </div>
           <div>
             <a href="/projects">
-              <span className="hover:text-gray-500">Projects</span>
+              <span className="hover:text-[#45b8ac] duration-150">
+                Projects
+              </span>
             </a>
           </div>
           <div>
             <a href="/blog">
-              <span className="hover:text-gray-500">Blog</span>
+              <span className="hover:text-[#45b8ac] duration-150">Blog</span>
             </a>
           </div>
           <div>
             <a href="/me">
-              <span className="hover:text-gray-500">About me</span>
+              <span className="hover:text-[#45b8ac] duration-150">
+                About me
+              </span>
             </a>
           </div>
         </div>
@@ -60,7 +64,7 @@ export default function Navbar() {
           {pathName !== "/" ? (
             <div>
               <a href="/">
-                <span className="hover:text-gray-500">Home</span>
+                <span className="hover:text-[#45b8ac] duration-150">Home</span>
               </a>
             </div>
           ) : (
@@ -69,7 +73,9 @@ export default function Navbar() {
           {pathName !== "/projects" ? (
             <div>
               <a href="/projects">
-                <span className="hover:text-gray-500">Projects</span>
+                <span className="hover:text-[#45b8ac] duration-150">
+                  Projects
+                </span>
               </a>
             </div>
           ) : (
@@ -78,7 +84,7 @@ export default function Navbar() {
           {pathName !== "/blog" ? (
             <div>
               <a href="/blog">
-                <span className="hover:text-gray-500">Blog</span>
+                <span className="hover:text-[#45b8ac] duration-150">Blog</span>
               </a>
             </div>
           ) : (
@@ -87,7 +93,9 @@ export default function Navbar() {
           {pathName !== "/me" ? (
             <div>
               <a href="/me">
-                <span className="hover:text-gray-500">About me</span>
+                <span className="hover:text-[#45b8ac] duration-150">
+                  About me
+                </span>
               </a>
             </div>
           ) : (

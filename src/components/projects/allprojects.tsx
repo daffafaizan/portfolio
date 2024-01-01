@@ -16,6 +16,8 @@ export default function AllProjects() {
   const [showNubengine, setShowNubengine] = useState(false);
   const [showPortoDaffa, setShowPortoDaffa] = useState(false);
   const [showPortoFahd, setShowPortoFahd] = useState(false);
+  const [showTools, setShowTools] = useState(false);
+
   return (
     <div className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center mt-16 px-2 pb-4">
       <div className="w-full text-left">
@@ -72,9 +74,9 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute z-10 rounded-2xl">
+            <div className="absolute top-5 left-5 z-10 rounded-2xl">
               <button onClick={() => setShowTodolist(!showTodolist)}>
-                <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
+                <ChevronDownIcon className="h-8 w-8 text-white" />
               </button>
             </div>
           )}
@@ -148,9 +150,9 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute z-10 rounded-2xl">
+            <div className="absolute top-5 left-5 z-10 rounded-2xl">
               <button onClick={() => setShowPomodoro(!showPomodoro)}>
-                <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
+                <ChevronDownIcon className="h-8 w-8 text-white" />
               </button>
             </div>
           )}
@@ -230,9 +232,9 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute z-10 rounded-2xl">
+            <div className="absolute top-5 left-5 z-10 rounded-2xl">
               <button onClick={() => setShowInvite(!showInvite)}>
-                <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
+                <ChevronDownIcon className="h-8 w-8 text-white" />
               </button>
             </div>
           )}
@@ -300,9 +302,9 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute z-10 rounded-2xl">
+            <div className="absolute top-5 left-5 z-10 rounded-2xl">
               <button onClick={() => setShowNubengine(!showNubengine)}>
-                <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
+                <ChevronDownIcon className="h-8 w-8 text-white" />
               </button>
             </div>
           )}
@@ -380,9 +382,9 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute z-10 rounded-2xl">
+            <div className="absolute top-5 left-5 z-10 rounded-2xl">
               <button onClick={() => setShowPortoDaffa(!showPortoDaffa)}>
-                <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
+                <ChevronDownIcon className="h-8 w-8 text-white" />
               </button>
             </div>
           )}
@@ -456,9 +458,9 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute z-10 rounded-2xl">
+            <div className="absolute top-5 left-5 z-10 rounded-2xl">
               <button onClick={() => setShowPortoFahd(!showPortoFahd)}>
-                <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
+                <ChevronDownIcon className="h-8 w-8 text-white" />
               </button>
             </div>
           )}
@@ -484,6 +486,18 @@ export default function AllProjects() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="w-full mt-4 sm:mt-6">
+        <button
+          onClick={() => setShowTools(!showTools)}
+          className={`group flex flex-row justify-between items-center gap-4 border ${
+            showTools
+              ? "bg-[#45b8ac] text-white border-white hover:bg-[#3ea69b]"
+              : "bg-white text-black border-black hover:bg-[#45b8ac] hover:text-white hover:border-white"
+          } duration-150 rounded-full px-3 py-2 lg:px-5 lg:py-4 text-base sm:text-xl lg:text-3xl`}
+        >
+          <span>Tools I use.</span>
+        </button>
       </div>
     </div>
   );
