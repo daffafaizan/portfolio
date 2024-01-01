@@ -67,7 +67,7 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl">
+            <div className="absolute z-10 rounded-2xl">
               <button onClick={() => setShowTodolist(!showTodolist)}>
                 <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
               </button>
@@ -138,7 +138,7 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl">
+            <div className="absolute z-10 rounded-2xl">
               <button onClick={() => setShowPomodoro(!showPomodoro)}>
                 <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
               </button>
@@ -220,7 +220,7 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl">
+            <div className="absolute z-10 rounded-2xl">
               <button onClick={() => setShowInvite(!showInvite)}>
                 <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
               </button>
@@ -290,7 +290,7 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl">
+            <div className="absolute z-10 rounded-2xl">
               <button onClick={() => setShowNubengine(!showNubengine)}>
                 <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
               </button>
@@ -365,7 +365,7 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl">
+            <div className="absolute z-10 rounded-2xl">
               <button onClick={() => setShowPortoDaffa(!showPortoDaffa)}>
                 <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
               </button>
@@ -436,7 +436,7 @@ export default function AllProjects() {
               </div>
             </div>
           ) : (
-            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl">
+            <div className="absolute z-10 rounded-2xl">
               <button onClick={() => setShowPortoFahd(!showPortoFahd)}>
                 <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
               </button>
