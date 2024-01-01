@@ -10,6 +10,7 @@ import portodaffa from "../../../public/Portfolio/Dark (1).png";
 import portofahd from "../../../public/Portfolio/Dark (3).png";
 
 export default function AllProjects() {
+  const [showInvite, setShowInvite] = useState(false);
   const [showNubengine, setShowNubengine] = useState(false);
   const [showPortoDaffa, setShowPortoDaffa] = useState(false);
   const [showPortoFahd, setShowPortoFahd] = useState(false);
@@ -70,6 +71,64 @@ export default function AllProjects() {
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
         <div className="relative w-full lg:w-5/12 lg:h-96 mt-4 sm:mt-6">
+          {showInvite ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowInvite(!showInvite)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Python
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Django
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    PostgreSQL
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Docker
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    GCP
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Tailwind
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl text-white">
+                <span>Invite</span>
+                <span>Team-matcher</span>
+              </div>
+              <div className="hidden absolute lg:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>A project for the</span>
+                <span>Software Engineering class</span>
+                <span>for students to find teams to</span>
+                <span>participate in a competition.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl">
+              <button onClick={() => setShowInvite(!showInvite)}>
+                <ChevronDownIcon className="absolute top-5 left-5 h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
           <Image
             className="rounded-2xl h-full object-cover"
             src={invite}
@@ -115,6 +174,11 @@ export default function AllProjects() {
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
                     Tailwind
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    GCP
                   </span>
                 </div>
               </div>
