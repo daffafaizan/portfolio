@@ -489,6 +489,84 @@ export default function AllProjects() {
           </div>
         </div>
       </div>
+      <div className="w-full flex flex-col lg:flex-row justify-center items-center">
+        <div className="relative w-full lg:h-96 mt-4 sm:mt-6">
+          {showPortoDaffa ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-2xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowPortoDaffa(!showPortoDaffa)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Typescript
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    React.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Vite.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Tailwind
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Netlify
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
+                <span>Daffa's</span>
+                <span>Portfolio</span>
+              </div>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>My first iteration of a</span>
+                <span>portfolio website featuring</span>
+                <span>finished projects, experiences,</span>
+                <span>technologies, and socials.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute top-5 left-5 z-10 rounded-2xl">
+              <button onClick={() => setShowPortoDaffa(!showPortoDaffa)}>
+                <ChevronDownIcon className="h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
+          <Image
+            className="rounded-2xl h-full object-cover"
+            src={portodaffa}
+            alt="Daffa's Portfolio"
+            quality={100}
+            priority={true}
+          />
+          <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
+            <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
+              <span className="text-base sm:text-xl font-medium">Daffa's</span>
+              <a
+                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
+                href="https://daffafaizan.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Open</span>
+                <HiOutlineExternalLink />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="w-full mt-4 sm:mt-6">
         <button
           onClick={() => setShowTools(!showTools)}
