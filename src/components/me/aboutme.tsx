@@ -1,10 +1,7 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
 import profile from "../../../public/new_pp_large.jpg";
-import { useState } from "react";
 
 export default function AboutMe() {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="min-h-screen w-full sm:w-5/6 flex flex-col lg:flex-row justify-stretch items-stretch mt-16 px-2 pb-4 lg:mt-0 lg:pt-4 gap-4 lg:gap-6">
       <div className="w-full lg:w-5/12 flex flex-col justify-center items-center">
@@ -38,18 +35,6 @@ export default function AboutMe() {
           curiosity and dedication positions him on a compelling journey towards
           becoming a skilled and innovative Software Engineer.
         </span>
-        <div className="w-full z-10 flex justify-center items-center mt-4 sm:mt-6">
-          <motion.button
-            onClick={() => setIsOpen(!isOpen)}
-            className={`border border-black bg-white hover:bg-[#45b8ac] hover:text-white hover:border-white duration-150 rounded-full ${
-              !isOpen
-                ? "px-3 py-2 lg:px-5 lg:py-4"
-                : "px-8 py-6 lg:px-16 lg:py-12"
-            } text-base sm:text-xl lg:text-3xl`}
-          >
-            <span>Work with me.</span>
-          </motion.button>
-        </div>
       </div>
     </div>
   );
