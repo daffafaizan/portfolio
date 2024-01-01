@@ -503,7 +503,7 @@ export default function AllProjects() {
       </div>
       {showTools ? (
         <div
-          className={`w-full flex flex-row flex-wrap justify-center items-center gap-6 mt-4 sm:mt-6 transition transform ease-in-out duration-300 ${
+          className={`w-full flex flex-row flex-wrap justify-center items-center gap-6 mt-8 transition transform ease-in-out duration-300 ${
             showTools ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -515,7 +515,7 @@ export default function AllProjects() {
         </div>
       ) : (
         <div
-          className={`w-full flex flex-row flex-wrap justify-center items-center gap-6 mr-[500px] mt-4 sm:mt-6 transition transform ease-in-out duration-300 ${
+          className={`w-full flex flex-row flex-wrap justify-center items-center gap-6 mr-[500px] mt-8 transition transform ease-in-out duration-300 ${
             showTools ? "translate-x-0" : "-translate-x-full"
           }`}
         >
