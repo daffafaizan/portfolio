@@ -11,16 +11,13 @@ import todolist from "../../../public/Todolist/Shot (14).png";
 export default function Projects() {
   return (
     <div className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center px-2 py-4">
-      <AnimatedDiv main={false} className="w-full text-left">
+      <AnimatedDiv className="w-full text-left">
         <span className="text-3xl sm:text-5xl lg:text-7xl font-semibold">
           Projects
         </span>
       </AnimatedDiv>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <AnimatedDiv
-          main={false}
-          className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6"
-        >
+        <AnimatedDiv className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={todolist}
@@ -43,10 +40,7 @@ export default function Projects() {
             </div>
           </div>
         </AnimatedDiv>
-        <AnimatedDiv
-          main={false}
-          className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6"
-        >
+        <AnimatedDiv className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={pomodoro}
@@ -71,7 +65,7 @@ export default function Projects() {
         </AnimatedDiv>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <div className="relative w-full lg:w-5/12 lg:h-96 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-5/12 lg:h-96 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={invite}
@@ -93,8 +87,8 @@ export default function Projects() {
               </a>
             </div>
           </div>
-        </div>
-        <div className="relative w-full lg:w-7/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        </AnimatedDiv>
+        <AnimatedDiv className="relative w-full lg:w-7/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={nubengine}
@@ -118,17 +112,19 @@ export default function Projects() {
               </a>
             </div>
           </div>
-        </div>
+        </AnimatedDiv>
       </div>
       <div className="w-full mt-4 sm:mt-6">
-        <form action="/projects">
-          <button
-            type="submit"
-            className="border border-black bg-white hover:bg-[#45b8ac] hover:text-white hover:border-white duration-150 rounded-full px-3 py-2 lg:px-5 lg:py-4 text-base sm:text-xl lg:text-3xl"
-          >
-            See more projects.
-          </button>
-        </form>
+        <AnimatedDiv className="">
+          <form action="/projects">
+            <button
+              type="submit"
+              className="border border-black bg-white hover:bg-[#45b8ac] hover:text-white hover:border-white duration-150 rounded-full px-3 py-2 lg:px-5 lg:py-4 text-base sm:text-xl lg:text-3xl"
+            >
+              See more projects.
+            </button>
+          </form>
+        </AnimatedDiv>
       </div>
     </div>
   );

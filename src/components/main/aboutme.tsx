@@ -4,10 +4,7 @@ import AnimatedDiv from "../animations/animateddiv";
 
 export default function AboutMe() {
   return (
-    <AnimatedDiv
-      main={false}
-      className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center px-2 py-4"
-    >
+    <AnimatedDiv className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center px-2 py-4">
       <div className="w-full text-left">
         <span className="text-3xl sm:text-5xl lg:text-7xl font-semibold">
           About me
