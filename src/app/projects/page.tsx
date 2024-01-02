@@ -1,4 +1,5 @@
 "use client";
+
 import AnimatedPage from "@/components/animations/pageanim";
 import AllProjects from "@/components/projects/allprojects";
 

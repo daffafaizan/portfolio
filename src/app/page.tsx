@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import AnimatedPage from "@/components/animations/pageanim";
 import AboutMe from "@/components/main/aboutme";
 import Intro from "@/components/main/intro";
