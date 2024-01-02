@@ -1,6 +1,6 @@
 "use client";
 
-import AnimatedPage from "@/components/animations/pageanim";
+import AnimatedPage from "@/components/animations/animatedpage";
 import AllProjects from "@/components/projects/allprojects";
 
 export default function Projects() {

@@ -1,3 +1,6 @@
+"use client";
+
+import AnimatedDiv from "../animations/animateddiv";
 import Image from "next/image";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import pomodoro from "../../../public/Pomodoro/Shot.png";
@@ -8,13 +11,16 @@ import todolist from "../../../public/Todolist/Shot (14).png";
 export default function Projects() {
   return (
     <div className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center px-2 py-4">
-      <div className="w-full text-left">
+      <AnimatedDiv main={false} className="w-full text-left">
         <span className="text-3xl sm:text-5xl lg:text-7xl font-semibold">
           Projects
         </span>
-      </div>
+      </AnimatedDiv>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <div className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
+        <AnimatedDiv
+          main={false}
+          className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6"
+        >
           <Image
             className="rounded-2xl h-full object-cover"
             src={todolist}
@@ -36,8 +42,11 @@ export default function Projects() {
               </a>
             </div>
           </div>
-        </div>
-        <div className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        </AnimatedDiv>
+        <AnimatedDiv
+          main={false}
+          className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6"
+        >
           <Image
             className="rounded-2xl h-full object-cover"
             src={pomodoro}
@@ -59,7 +68,7 @@ export default function Projects() {
               </a>
             </div>
           </div>
-        </div>
+        </AnimatedDiv>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
         <div className="relative w-full lg:w-5/12 lg:h-96 mt-4 sm:mt-6">

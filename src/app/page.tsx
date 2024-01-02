@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import AnimatedPage from "@/components/animations/pageanim";
+import AnimatedPage from "@/components/animations/animatedpage";
 import AboutMe from "@/components/main/aboutme";
 import Intro from "@/components/main/intro";
 import Projects from "@/components/main/projects";

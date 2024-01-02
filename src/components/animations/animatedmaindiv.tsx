@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function MainDivAnim({ children }: { children: any }) {
+export default function AnimatedMainDiv({ children }: { children: any }) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   const squareVariants = {

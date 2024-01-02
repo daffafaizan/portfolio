@@ -1,6 +1,6 @@
 "use client";
 
-import AnimatedPage from "@/components/animations/pageanim";
+import AnimatedPage from "@/components/animations/animatedpage";
 import UnderConstruction from "@/components/misc/construction";
 
 export default function Blog() {

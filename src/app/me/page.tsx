@@ -1,6 +1,6 @@
 "use client";
 
-import AnimatedPage from "@/components/animations/pageanim";
+import AnimatedPage from "@/components/animations/animatedpage";
 import AboutMe from "@/components/me/aboutme";
 
 export default function Me() {
