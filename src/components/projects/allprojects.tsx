@@ -11,6 +11,7 @@ import portofahd from "../../../public/Portfolio/Dark (3).png";
 import wallpaper from "../../../public/Misc/wp1.jpg";
 import tools from "@/data/tools";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import AnimatedDiv from "../animations/animateddiv";
 
 export default function AllProjects() {
   const [showTodolist, setShowTodolist] = useState(false);
@@ -23,13 +24,13 @@ export default function AllProjects() {
 
   return (
     <div className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center mt-16 px-2 pb-4">
-      <div className="w-full text-left">
+      <AnimatedDiv className="w-full text-left">
         <span className="text-3xl sm:text-5xl lg:text-7xl font-semibold">
           Projects
         </span>
-      </div>
+      </AnimatedDiv>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <div className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
           {showTodolist ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -104,8 +105,8 @@ export default function AllProjects() {
               </a>
             </div>
           </div>
-        </div>
-        <div className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        </AnimatedDiv>
+        <AnimatedDiv className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           {showPomodoro ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -180,10 +181,10 @@ export default function AllProjects() {
               </a>
             </div>
           </div>
-        </div>
+        </AnimatedDiv>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <div className="relative w-full lg:w-5/12 lg:h-96 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-5/12 lg:h-96 mt-4 sm:mt-6">
           {showInvite ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -262,8 +263,8 @@ export default function AllProjects() {
               </a>
             </div>
           </div>
-        </div>
-        <div className="relative w-full lg:w-7/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        </AnimatedDiv>
+        <AnimatedDiv className="relative w-full lg:w-7/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           {showNubengine ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -334,10 +335,10 @@ export default function AllProjects() {
               </a>
             </div>
           </div>
-        </div>
+        </AnimatedDiv>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <div className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
           {showPortoDaffa ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -412,8 +413,8 @@ export default function AllProjects() {
               </a>
             </div>
           </div>
-        </div>
-        <div className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        </AnimatedDiv>
+        <AnimatedDiv className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           {showPortoFahd ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -488,10 +489,10 @@ export default function AllProjects() {
               </a>
             </div>
           </div>
-        </div>
+        </AnimatedDiv>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <div className="relative w-full lg:h-96 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:h-96 mt-4 sm:mt-6">
           <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
             <div className="absolute flex flex-col bottom-5 p-2 right-5 text-md sm:text-lg text-right text-white gap-2">
               <a
@@ -518,9 +519,9 @@ export default function AllProjects() {
             quality={100}
             priority={true}
           />
-        </div>
+        </AnimatedDiv>
       </div>
-      <div className="w-full mt-4 sm:mt-6">
+      <AnimatedDiv className="w-full mt-4 sm:mt-6">
         <button
           onClick={() => setShowTools(!showTools)}
           className={`group flex flex-row justify-between items-center gap-4 border ${
@@ -531,7 +532,7 @@ export default function AllProjects() {
         >
           <span>Tools I use.</span>
         </button>
-      </div>
+      </AnimatedDiv>
       {showTools ? (
         <div
           className={`w-full flex flex-row flex-wrap justify-center items-center gap-6 mt-8 transition transform ease-in-out duration-300 ${
