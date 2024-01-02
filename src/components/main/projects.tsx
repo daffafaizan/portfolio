@@ -27,7 +27,7 @@ export default function Projects() {
               <span className="text-base sm:text-xl font-medium">Todolist</span>
               <a
                 className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
-                href="https://todolist.daffafaizan.com"
+                href="https://todolist-by-dmf.netlify.app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -50,7 +50,7 @@ export default function Projects() {
               <span className="text-base sm:text-xl font-medium">Pomodoro</span>
               <a
                 className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
-                href="https://pomotimer.daffafaizan.com"
+                href="https://pomotimer-by-dmf.netlify.app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
