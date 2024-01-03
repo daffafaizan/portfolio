@@ -55,6 +55,11 @@ const tools = [
     icon: "teenyicons:nextjs-solid",
   },
   {
+    id: 22,
+    title: "Node.js",
+    icon: "logos:nodejs",
+  },
+  {
     id: 12,
     title: "Express.js",
     icon: "skill-icons:expressjs-light",
@@ -99,11 +104,11 @@ const tools = [
     title: "Vim",
     icon: "logos:vim",
   },
-  {
-    id: 21,
-    title: "Postman",
-    icon: "logos:postman-icon",
-  },
+  // {
+  //   id: 21,
+  //   title: "Postman",
+  //   icon: "logos:postman-icon",
+  // },
 ];
 
 export default tools;
