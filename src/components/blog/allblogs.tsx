@@ -29,6 +29,7 @@ export default function AllBlogs() {
             key={post.id}
             title={post.title}
             content={post.content}
+            date={post.date}
             time={post.time}
             postAuthor={post.postAuthor}
             comments={post.comments}
