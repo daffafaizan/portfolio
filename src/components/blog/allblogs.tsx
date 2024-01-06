@@ -4,11 +4,14 @@ import AnimatedDiv from "../animations/animateddiv";
 export default function AllBlogs() {
   const url = "http://localhost:8080/api/posts";
   const [posts, setPosts] = useState([]);
-  const getPosts = () => {
-    fetch(url)
+  async function getPosts() {
+    await fetch(url)
       .then((response) => response.json())
-      .then((data) => setPosts(data));
-  };
+      .then((data) => {
+        setPosts(data);
+        console.log(data);
+      });
+  }
   useEffect(() => {
     getPosts();
   }, []);
