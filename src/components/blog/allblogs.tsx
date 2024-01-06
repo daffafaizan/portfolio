@@ -17,15 +17,17 @@ export default function AllBlogs() {
     getPosts();
   }, []);
   return (
-    <AnimatedDiv className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center px-2 py-4">
-      {posts.map((post) => (
-        <Blog
-          key={post.id}
-          title={post.title}
-          content={post.content}
-          time={post.time}
-        />
-      ))}
+    <AnimatedDiv className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center mt-16 px-2 pb-4">
+      <AnimatedDiv className="w-full text-left mb-4 sm:mb-6">
+        <span className="text-3xl sm:text-5xl lg:text-7xl font-semibold">
+          Blog
+        </span>
+      </AnimatedDiv>
+      <div className="flex flex-row flex-wrap items-center justify-center gap-4">
+        {posts.map((post) => (
+          <Blog key={post.id} title={post.title} content={post.content} />
+        ))}
+      </div>
     </AnimatedDiv>
   );
 }
