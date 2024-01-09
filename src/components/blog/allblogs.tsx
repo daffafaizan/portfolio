@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import AnimatedDiv from "../animations/animateddiv";
-import Blog from "./blog";
+import BlogPreview from "./blogpreview";
 
 export default function AllBlogs() {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/posts`;
@@ -25,9 +25,10 @@ export default function AllBlogs() {
       </AnimatedDiv>
       <div className="w-full flex flex-row flex-wrap items-center gap-4">
         {posts.map((post) => (
-          <Blog
+          <BlogPreview
             key={post._id}
             title={post.title}
+            summary={post.summary}
             content={post.content}
             date={post.date}
             time={post.time}
