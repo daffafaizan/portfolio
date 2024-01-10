@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { BiComment } from "react-icons/Bi";
+import { RxPerson } from "react-icons/rx";
 import AnimatedDiv from "../../../components/animations/animateddiv";
 import AnimatedPage from "../../../components/animations/animatedpage";
 
@@ -39,6 +40,21 @@ export default function Blog({ params }: { params: { slug: string } }) {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/posts/read/${params.slug}`;
   const [showComments, setShowComments] = useState(false);
   const [data, setData] = useState<PostData>(initialPostData);
+  const formatDate = (date: string) => {
+    return new Date(date).toLocaleDateString("en-GB", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  };
+  const formatDateWithoutDay = (date: string) => {
+    return new Date(date).toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  };
   const getData = useCallback(async () => {
     await fetch(url)
       .then((response) => response.json())
@@ -49,12 +65,6 @@ export default function Blog({ params }: { params: { slug: string } }) {
   useEffect(() => {
     getData();
   }, [getData]);
-  const formattedDate = new Date(data.createdAt).toLocaleDateString("en-GB", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
   return (
     <AnimatedPage>
       <main className="flex flex-col items-center p-4">
@@ -67,9 +77,14 @@ export default function Blog({ params }: { params: { slug: string } }) {
               <span className="border-r border-r-black pr-2">
                 {data.postAuthor.name}
               </span>
-              <span className="pl-2 text-gray-700">{formattedDate}</span>
+              <span className="pl-2 text-gray-700">
+                {formatDate(data.createdAt)}
+              </span>
             </div>
-            <span className="text-justify mt-2">{data.content}</span>
+            <span
+              className="text-justify mt-2"
+              dangerouslySetInnerHTML={{ __html: data.content }}
+            />
             <hr className="my-2" />
             <div className="w-full flex flex-row p-1">
               <BiComment
@@ -81,16 +96,32 @@ export default function Blog({ params }: { params: { slug: string } }) {
                 onClick={() => setShowComments(!showComments)}
               />
             </div>
-            <div>
+            <div className="flex items-center justify-center text-sm">
               {showComments ? (
-                <>
-                  <div className={`w-full flex flex-col justify-center`}>
-                    {data.comments &&
-                      data.comments.map((comment) => (
-                        <div key={comment._id}>{comment.content}</div>
-                      ))}
-                  </div>
-                </>
+                <div className={`w-5/6 flex flex-col justify-center gap-4`}>
+                  {data.comments &&
+                    data.comments.map((comment) => (
+                      <div
+                        key={comment._id}
+                        className="w-full flex flex-col items-center gap-2"
+                      >
+                        <div className="w-full flex flex-row items-center gap-2">
+                          <div className="h-7 w-7 aspect-square flex items-center justify-center border border-black rounded-full">
+                            <RxPerson />
+                          </div>
+                          <div className="w-full flex flex-col">
+                            <span>{comment.commentAuthor.name}</span>
+                            <span className="text-xs text-gray-700">
+                              {formatDateWithoutDay(comment.createdAt)}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="w-full bg-gray-100 bg-opacity-65 rounded-sm p-2">
+                          <span>{comment.content}</span>
+                        </div>
+                      </div>
+                    ))}
+                </div>
               ) : (
                 <></>
               )}
