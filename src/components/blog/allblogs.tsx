@@ -10,7 +10,6 @@ export default function AllBlogs() {
       .then((response) => response.json())
       .then((data) => {
         setPosts(data);
-        console.log(data);
       });
   }, [url]);
   useEffect(() => {
@@ -23,10 +22,11 @@ export default function AllBlogs() {
           Blog
         </span>
       </AnimatedDiv>
-      <div className="w-full grid grid-cols-1 flex-wrap items-center gap-4">
+      <div className="w-full grid grid-cols-1 flex-wrap items-center gap-6 sm:gap-4">
         {posts.map((post) => (
           <BlogPreview
             key={post._id}
+            slug={post.slug}
             title={post.title}
             summary={post.summary}
             createdAt={post.createdAt}
