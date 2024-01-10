@@ -98,30 +98,40 @@ export default function Blog({ params }: { params: { slug: string } }) {
             </div>
             <div className="flex items-center justify-center text-sm">
               {showComments ? (
-                <div className={`w-5/6 flex flex-col justify-center gap-4`}>
-                  {data.comments &&
-                    data.comments.map((comment) => (
-                      <div
-                        key={comment._id}
-                        className="w-full flex flex-col items-center gap-2"
-                      >
-                        <div className="w-full flex flex-row items-center gap-2">
-                          <div className="h-7 w-7 aspect-square flex items-center justify-center border border-black rounded-full">
-                            <RxPerson />
+                data.comments && data.comments.length > 0 ? (
+                  <div className={`w-5/6 flex flex-col justify-center gap-4`}>
+                    {data.comments &&
+                      data.comments.map((comment) => (
+                        <div
+                          key={comment._id}
+                          className="w-full flex flex-col items-center gap-2"
+                        >
+                          <div className="w-full flex flex-row items-center gap-2">
+                            <div className="h-7 w-7 aspect-square flex items-center justify-center border border-black rounded-full">
+                              <RxPerson />
+                            </div>
+                            <div className="w-full flex flex-col">
+                              <span>{comment.commentAuthor.name}</span>
+                              <span className="text-xs text-gray-700">
+                                {formatDateWithoutDay(comment.createdAt)}
+                              </span>
+                            </div>
                           </div>
-                          <div className="w-full flex flex-col">
-                            <span>{comment.commentAuthor.name}</span>
-                            <span className="text-xs text-gray-700">
-                              {formatDateWithoutDay(comment.createdAt)}
-                            </span>
+                          <div className="w-full bg-gray-100 bg-opacity-65 rounded-sm p-2">
+                            <span>{comment.content}</span>
                           </div>
                         </div>
-                        <div className="w-full bg-gray-100 bg-opacity-65 rounded-sm p-2">
-                          <span>{comment.content}</span>
-                        </div>
+                      ))}
+                  </div>
+                ) : (
+                  <div className="w-5/6 flex flex-col justify-center gap-4">
+                    <div className="w-full flex flex-col items-center gap-2">
+                      <div className="w-full bg-gray-100 bg-opacity-65 rounded-sm p-2">
+                        <span>No comments found.</span>
                       </div>
-                    ))}
-                </div>
+                    </div>
+                  </div>
+                )
               ) : (
                 <></>
               )}
