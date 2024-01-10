@@ -25,7 +25,7 @@ export default function BlogPreview({
     year: "numeric",
   });
   return (
-    <AnimatedDiv className="flex flex-col w-auto border rounded-3xl p-5 gap-2">
+    <AnimatedDiv className="flex flex-col w-auto bg-white gap-2">
       <span className="text-sm text-gray-700 font-light">
         {formattedDate} by {postAuthor.name}
       </span>
@@ -33,12 +33,17 @@ export default function BlogPreview({
       <span className="text-sm">{summary}</span>
       <div className="w-full flex flex-row gap-1">
         {tags.map((tag: any) => (
-          <span key={tag} className="border rounded-xl px-2 py-1">
+          <span
+            key={tag}
+            className="bg-white border border-black hover:bg-[#45b8ac] hover:text-white hover:border-white duration-150 rounded-xl px-2 py-1"
+          >
             {tag}
           </span>
         ))}
       </div>
-      <Link href={`/blog/${slug}`}>Read more.</Link>
+      <Link href={`/blog/${slug}`}>
+        <span className="hover:text-[#45b8ac] duration-150">Read more.</span>
+      </Link>
     </AnimatedDiv>
   );
 }
