@@ -3,27 +3,36 @@ import AnimatedDiv from "../animations/animateddiv";
 interface BlogPreviewProps {
   title: string;
   summary: string;
-  content: string;
-  date: string;
-  time: string;
+  createdAt: string;
   postAuthor: any;
-  comments: any;
+  tags: any;
 }
 
 export default function BlogPreview({
   title,
   summary,
-  content,
-  date,
+  createdAt,
   postAuthor,
+  tags,
 }: BlogPreviewProps) {
+  const formattedDate = new Date(createdAt).toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
   return (
-    <AnimatedDiv className="flex flex-col h-80 aspect-square w-auto border border-black rounded-3xl p-5 gap-2">
-      <span className="text-md font-semibold">{title}</span>
-      <span className="text-sm">
-        {date} by <span className="font-semibold">{postAuthor.name}</span>
+    <AnimatedDiv className="flex flex-col w-auto border bg-white hover:drop-shadow-lg duration-150 transition rounded-3xl p-5 gap-2">
+      <span>
+        {formattedDate} by {postAuthor.name}
       </span>
-      <span className="flex-grow text-sm">{summary}</span>
+      <span>{title}</span>
+      <span>{summary}</span>
+      <div className="w-full flex flex-row">
+        {tags.map((tag: any) => (
+          <span key={tag}>{tag}</span>
+        ))}
+      </div>
     </AnimatedDiv>
   );
 }
