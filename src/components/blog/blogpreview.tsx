@@ -44,6 +44,7 @@ export default function BlogPreview({
       <Link href={`/blog/${slug}`}>
         <span className="hover:text-[#45b8ac] duration-150">Read more.</span>
       </Link>
+      <hr className="mt-4" />
     </AnimatedDiv>
   );
 }

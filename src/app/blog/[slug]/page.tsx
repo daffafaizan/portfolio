@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { TfiComment } from "react-icons/tfi";
+import { BiComment } from "react-icons/Bi";
 import AnimatedDiv from "../../../components/animations/animateddiv";
 import AnimatedPage from "../../../components/animations/animatedpage";
 
@@ -58,30 +58,43 @@ export default function Blog({ params }: { params: { slug: string } }) {
   return (
     <AnimatedPage>
       <main className="flex flex-col items-center p-4">
-        <div className="min-h-screen w-full sm:w-5/6 md:w-[640px] flex flex-col items-center mt-16 px-2 pb-4">
+        <div className="min-h-screen w-full sm:w-5/6 md:w-[640px] flex flex-col items-center mt-16 sm:mt-32 px-2 pb-4">
           <AnimatedDiv className="w-full flex flex-col text-left gap-2">
             <span className="text-2xl sm:text-4xl font-semibold">
               {data.title}
             </span>
-            <span>{data.postAuthor.name}</span>
-            <span>{formattedDate}</span>
-            <span className="text-justify">{data.content}</span>
-            <div className="w-full flex flex-row">
-              <TfiComment
-                className="hover:text-[#45b8ac]"
+            <div className="w-full flex flex-row items-center text-sm">
+              <span className="border-r border-r-black pr-2">
+                {data.postAuthor.name}
+              </span>
+              <span className="pl-2 text-gray-700">{formattedDate}</span>
+            </div>
+            <span className="text-justify mt-2">{data.content}</span>
+            <hr className="my-2" />
+            <div className="w-full flex flex-row p-1">
+              <BiComment
+                className={`h-6 w-6 ${
+                  showComments
+                    ? "text-[#45b8ac] hover:text-[#3ea69b]"
+                    : "text-black hover:text-[#45b8ac]"
+                } hover:text-[#45b8ac]`}
                 onClick={() => setShowComments(!showComments)}
               />
             </div>
-            {showComments ? (
-              <div className="w-full flex flex-col">
-                {data.comments &&
-                  data.comments.map((comment) => (
-                    <div key={comment._id}>{comment.content}</div>
-                  ))}
-              </div>
-            ) : (
-              <></>
-            )}
+            <div>
+              {showComments ? (
+                <>
+                  <div className={`w-full flex flex-col justify-center`}>
+                    {data.comments &&
+                      data.comments.map((comment) => (
+                        <div key={comment._id}>{comment.content}</div>
+                      ))}
+                  </div>
+                </>
+              ) : (
+                <></>
+              )}
+            </div>
           </AnimatedDiv>
         </div>
       </main>
