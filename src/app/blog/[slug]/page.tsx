@@ -3,8 +3,13 @@
 import { useEffect, useState, useCallback } from "react";
 import { BiComment } from "react-icons/Bi";
 import { RxPerson } from "react-icons/rx";
+import Markdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import AnimatedDiv from "../../../components/animations/animateddiv";
 import AnimatedPage from "../../../components/animations/animatedpage";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 interface PostData {
   title: string;
@@ -12,11 +17,7 @@ interface PostData {
   summary: string;
   content: string;
   createdAt: string;
-  postAuthor: {
-    name: string;
-    institution: string;
-    occupation: string;
-  };
+  postAuthor: string;
   tags: string[];
   comments: any[] | null;
 }
@@ -27,11 +28,7 @@ const initialPostData: PostData = {
   summary: "",
   content: "",
   createdAt: "",
-  postAuthor: {
-    name: "",
-    institution: "",
-    occupation: "",
-  },
+  postAuthor: "",
   tags: [],
   comments: null,
 };
@@ -99,21 +96,41 @@ export default function Blog({ params }: { params: { slug: string } }) {
       <main className="flex flex-col items-center p-4">
         <div className="min-h-screen w-full sm:w-5/6 md:w-[640px] flex flex-col items-center mt-16 sm:mt-32 px-2 pb-4">
           <AnimatedDiv className="w-full flex flex-col text-left gap-2">
-            <span className="text-2xl sm:text-4xl font-semibold">
+            <span className="text-2xl sm:text-4xl font-semibold -ml-1">
               {data.title}
             </span>
             <div className="w-full flex flex-row items-center text-sm">
               <span className="border-r border-r-black pr-2">
-                {data.postAuthor.name}
+                {data.postAuthor}
               </span>
               <span className="pl-2 text-gray-700">
                 {formatDate(data.createdAt)}
               </span>
             </div>
-            <span
-              className="text-justify mt-2"
-              dangerouslySetInnerHTML={{ __html: data.content }}
-            />
+            <Markdown
+              className="text-justify text-sm mt-2"
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
+              components={{
+                code(props) {
+                  const { children, className, node, ...rest } = props as any;
+                  const match = /language-(\w+)/.exec(className || "");
+                  return match ? (
+                    <SyntaxHighlighter
+                      {...rest}
+                      PreTag="div"
+                      children={String(children).replace(/\n$/, "")}
+                      language={match[1]}
+                      style={dark}
+                    />
+                  ) : (
+                    <code {...rest}>{children}</code>
+                  );
+                },
+              }}
+            >
+              {data.content}
+            </Markdown>
             <hr className="my-2" />
             <div className="w-full flex flex-row p-1">
               <BiComment

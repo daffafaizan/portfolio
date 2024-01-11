@@ -27,7 +27,7 @@ export default function BlogPreview({
   return (
     <AnimatedDiv className="flex flex-col w-auto bg-white gap-2">
       <span className="text-sm text-gray-700 font-light">
-        {formattedDate} by {postAuthor.name}
+        {formattedDate} by {postAuthor}
       </span>
       <span className="text-lg font-semibold">{title}</span>
       <span className="text-sm my-2">{summary}</span>
