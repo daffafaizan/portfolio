@@ -22,18 +22,26 @@ export default function AllBlogs() {
           Blogs
         </span>
       </AnimatedDiv>
+
       <AnimatedDiv className="w-full grid grid-cols-1 flex-wrap items-center gap-6 sm:gap-4">
-        {posts.map((post) => (
-          <BlogPreview
-            key={post._id}
-            slug={post.slug}
-            title={post.title}
-            summary={post.summary}
-            createdAt={post.createdAt}
-            postAuthor={post.postAuthor}
-            tags={post.tags}
-          />
-        ))}
+        {posts.length > 0 &&
+          posts.map((post) => (
+            <BlogPreview
+              key={post._id}
+              slug={post.slug}
+              title={post.title}
+              summary={post.summary}
+              createdAt={post.createdAt}
+              postAuthor={post.postAuthor}
+              tags={post.tags}
+            />
+          ))}
+        {posts.length == 0 && (
+          <AnimatedDiv className="flex flex-col w-auto bg-white gap-2">
+            <span className="text-md font-semibold">No blog posts found.</span>
+            <hr className="my-4" />
+          </AnimatedDiv>
+        )}
       </AnimatedDiv>
     </AnimatedDiv>
   );
