@@ -94,7 +94,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
       <main className="flex flex-col items-center p-4">
         <div className="min-h-screen w-full sm:w-5/6 md:w-[640px] flex flex-col items-center mt-16 sm:mt-32 px-2 pb-4">
           <AnimatedDiv className="w-full flex flex-col text-left gap-2">
-            <span className="text-2xl sm:text-4xl font-semibold -ml-1">
+            <span className="text-2xl sm:text-4xl font-semibold">
               {data.title}
             </span>
             <div className="w-full flex flex-row items-center text-sm">
