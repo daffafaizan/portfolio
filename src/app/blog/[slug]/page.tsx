@@ -37,9 +37,25 @@ const initialPostData: PostData = {
 };
 
 export default function Blog({ params }: { params: { slug: string } }) {
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/posts/read/${params.slug}`;
+  const getUrl = `${process.env.NEXT_PUBLIC_API_URL}/posts/${params.slug}`;
+  const postUrl = `${process.env.NEXT_PUBLIC_API_URL}/posts/${params.slug}/comments`;
   const [showComments, setShowComments] = useState(false);
   const [data, setData] = useState<PostData>(initialPostData);
+  const [name, setName] = useState("Anonymous");
+  const [content, setContent] = useState("");
+  const handleSubmit = () => {
+    fetch(postUrl, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        commentAuthor: name,
+        content: content,
+      }),
+    });
+  };
   const formatDate = (date: string) => {
     return new Date(date).toLocaleDateString("en-GB", {
       weekday: "long",
@@ -56,12 +72,12 @@ export default function Blog({ params }: { params: { slug: string } }) {
     });
   };
   const getData = useCallback(async () => {
-    await fetch(url)
+    await fetch(getUrl)
       .then((response) => response.json())
       .then((data) => {
         setData(data);
       });
-  }, [url]);
+  }, [getUrl]);
   useEffect(() => {
     getData();
   }, [getData]);
@@ -122,6 +138,18 @@ export default function Blog({ params }: { params: { slug: string } }) {
                           </div>
                         </div>
                       ))}
+                    <form className="w-full flex flex-col items-center gap-2">
+                      <div className="w-full border-2 border-gray-100 rounded-sm p-2">
+                        <input
+                          className="w-full border-2 border-gray-100 rounded-sm p-2"
+                          placeholder="Name"
+                        />
+                        <textarea
+                          className="w-full h-40 border-2 border-gray-100 rounded-sm mt-2 p-2"
+                          placeholder="Create a comment"
+                        />
+                      </div>
+                    </form>
                   </div>
                 ) : (
                   <div className="w-5/6 flex flex-col justify-center gap-4">
@@ -130,6 +158,31 @@ export default function Blog({ params }: { params: { slug: string } }) {
                         <span>No comments found.</span>
                       </div>
                     </div>
+                    <form
+                      onSubmit={handleSubmit}
+                      className="w-full flex flex-col items-center gap-2"
+                    >
+                      <div className="w-full border-2 border-gray-100 rounded-sm p-2">
+                        <input
+                          className="w-full border-2 border-gray-100 rounded-sm p-2"
+                          placeholder="Name"
+                          name={name}
+                          onChange={(e) => setName(e.currentTarget.value)}
+                        />
+                        <textarea
+                          className="w-full h-40 border-2 border-gray-100 rounded-sm mt-2 p-2"
+                          placeholder="Create a comment"
+                          name={content}
+                          onChange={(e) => setContent(e.currentTarget.value)}
+                        />
+                        <button
+                          type="submit"
+                          className="w-full bg-gray-100 hover:bg-gray-200 rounded-sm mt-1 py-2"
+                        >
+                          Send
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 )
               ) : (
