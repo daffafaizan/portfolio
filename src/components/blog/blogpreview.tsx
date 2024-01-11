@@ -29,9 +29,9 @@ export default function BlogPreview({
       <span className="text-sm text-gray-700 font-light">
         {formattedDate} by {postAuthor.name}
       </span>
-      <span className="text-md font-semibold">{title}</span>
-      <span className="text-sm">{summary}</span>
-      <div className="w-full flex flex-row gap-1">
+      <span className="text-lg font-semibold">{title}</span>
+      <span className="text-sm my-2">{summary}</span>
+      <div className="w-full flex flex-row flex-wrap text-sm gap-1">
         {tags.map((tag: any) => (
           <span
             key={tag}
@@ -44,7 +44,7 @@ export default function BlogPreview({
       <Link href={`/blog/${slug}`}>
         <span className="hover:text-[#45b8ac] duration-150">Read more.</span>
       </Link>
-      <hr className="my-4" />
+      <hr className="my-2" />
     </AnimatedDiv>
   );
 }
