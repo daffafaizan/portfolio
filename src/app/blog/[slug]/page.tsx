@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { BiComment } from "react-icons/Bi";
+import { BiComment } from "react-icons/bi";
 import { RxPerson } from "react-icons/rx";
 import Markdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
