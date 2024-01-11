@@ -43,18 +43,31 @@ export default function Blog({ params }: { params: { slug: string } }) {
   const [data, setData] = useState<PostData>(initialPostData);
   const [name, setName] = useState("Anonymous");
   const [content, setContent] = useState("");
-  const handleSubmit = () => {
-    fetch(postUrl, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        commentAuthor: name,
-        content: content,
-      }),
-    });
+  const handleSubmit = async () => {
+    event?.preventDefault();
+    try {
+      const response = await fetch(postUrl, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          commentAuthor: name,
+          content: content,
+        }),
+      });
+
+      if (response.ok) {
+        getData();
+        setName("");
+        setContent("");
+      } else {
+        console.error("Submission failed");
+      }
+    } catch (error) {
+      console.error("Error during submission", error);
+    }
   };
   const formatDate = (date: string) => {
     return new Date(date).toLocaleDateString("en-GB", {
@@ -127,7 +140,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
                               <RxPerson />
                             </div>
                             <div className="w-full flex flex-col">
-                              <span>{comment.commentAuthor.name}</span>
+                              <span>{comment.commentAuthor}</span>
                               <span className="text-xs text-gray-700">
                                 {formatDateWithoutDay(comment.createdAt)}
                               </span>
@@ -138,16 +151,29 @@ export default function Blog({ params }: { params: { slug: string } }) {
                           </div>
                         </div>
                       ))}
-                    <form className="w-full flex flex-col items-center gap-2">
+                    <form
+                      onSubmit={handleSubmit}
+                      className="w-full flex flex-col items-center gap-2"
+                    >
                       <div className="w-full border-2 border-gray-100 rounded-sm p-2">
                         <input
                           className="w-full border-2 border-gray-100 rounded-sm p-2"
                           placeholder="Name"
+                          name={name}
+                          onChange={(e) => setName(e.currentTarget.value)}
                         />
                         <textarea
                           className="w-full h-40 border-2 border-gray-100 rounded-sm mt-2 p-2"
                           placeholder="Create a comment"
+                          name={content}
+                          onChange={(e) => setContent(e.currentTarget.value)}
                         />
+                        <button
+                          type="submit"
+                          className="w-full bg-gray-100 hover:bg-gray-200 rounded-sm mt-1 py-2"
+                        >
+                          Send
+                        </button>
                       </div>
                     </form>
                   </div>

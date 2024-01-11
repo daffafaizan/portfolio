@@ -17,9 +17,9 @@ export default function AllBlogs() {
   }, [getPosts]);
   return (
     <AnimatedDiv className="min-h-screen w-full sm:w-5/6 flex flex-col items-center mt-16 px-2 pb-4">
-      <AnimatedDiv className="w-full text-left mb-4 sm:mb-6">
+      <AnimatedDiv className="w-full text-left mb-4 sm:mb-8">
         <span className="text-3xl sm:text-5xl lg:text-7xl font-semibold">
-          Blog
+          Blogs
         </span>
       </AnimatedDiv>
       <AnimatedDiv className="w-full grid grid-cols-1 flex-wrap items-center gap-6 sm:gap-4">
