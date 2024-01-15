@@ -21,22 +21,23 @@ export default function AboutMe() {
           Who is Daffa?
         </span>
         <span className="mt-4 sm:mt-6 text-md sm:text-lg">
-          Daffa, currently a third-year Computer Science Undergraduate at the
-          University of Indonesia, has developed a strong interest in Software
-          Engineering, specifically focusing on Front End Development. Known for
-          his passionate and enthusiastic approach to both his studies and work,
-          Daffa is committed to continuously expanding his skill set. While
-          specializing in Front End Development, he is also actively delving
-          into Back End Development to achieve a well-rounded proficiency.
+          Daffa, a third-year Computer Science Undergraduate at the University
+          of Indonesia, is a dedicated Full Stack Developer with a strong
+          background in Software Engineering. Recognized for his passionate and
+          enthusiastic approach to both studies and work, Daffa has successfully
+          broadened his skill set. Specializing in both Front End and Back End
+          Development, he excels in creating comprehensive solutions that
+          leverage his well-rounded proficiency in software development.
         </span>
         <span className="mt-4 sm:mt-6 text-md sm:text-lg">
           Proficient in programming languages such as Java, Python, Go,
           JavaScript, and TypeScript, Daffa showcases versatility in various
-          frameworks, including React, Next, Spring Boot, and Django. Driven by
-          a hunger for knowledge, he is determined to contribute significantly
-          to the dynamic field of Computer Science. Daffa's combination of
-          curiosity and dedication positions him on a compelling journey towards
-          becoming a skilled and innovative Software Engineer.
+          frameworks, including React, Next, Gin, Express, Spring Boot, and
+          Django. Driven by a hunger for knowledge, he is determined to
+          contribute significantly to the dynamic field of Computer Science.
+          Daffa's combination of curiosity and dedication positions him on a
+          compelling journey towards becoming a skilled and innovative Software
+          Engineer.
         </span>
       </div>
     </AnimatedDiv>
