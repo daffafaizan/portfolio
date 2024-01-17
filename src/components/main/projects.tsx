@@ -17,7 +17,7 @@ export default function Projects() {
         </span>
       </AnimatedDiv>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <AnimatedDiv className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-7/12 h-80 lg:h-96 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={todolist}
@@ -40,7 +40,7 @@ export default function Projects() {
             </div>
           </div>
         </AnimatedDiv>
-        <AnimatedDiv className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-5/12 h-80 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={pomodoro}
@@ -65,7 +65,7 @@ export default function Projects() {
         </AnimatedDiv>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <AnimatedDiv className="relative w-full lg:w-5/12 lg:h-96 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-5/12 h-80 lg:h-96 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={invite}
@@ -88,7 +88,7 @@ export default function Projects() {
             </div>
           </div>
         </AnimatedDiv>
-        <AnimatedDiv className="relative w-full lg:w-7/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-7/12 h-80 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           <Image
             className="rounded-2xl h-full object-cover"
             src={nubengine}
