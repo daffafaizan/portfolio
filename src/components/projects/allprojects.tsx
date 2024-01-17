@@ -7,8 +7,12 @@ import invite from "../../../public/Invite/Scene 1.png";
 import nubengine from "../../../public/Nubengine/MacBook-Pro-16 (1).png";
 import todolist from "../../../public/Todolist/Shot (14).png";
 import portodaffa from "../../../public/Portfolio/Dark (1).png";
+import portodaffanew from "../../../public/Portfolio/portfolionew.png";
 import portofahd from "../../../public/Portfolio/Dark (3).png";
 import wallpaper from "../../../public/Misc/wp1.jpg";
+import todolistapi from "../../../public/API/todolistapi.png";
+import blogapi from "../../../public/API/blogapi.png";
+import jwtexpress from "../../../public/API/jwtexpress.png";
 import tools from "@/data/tools";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import AnimatedDiv from "../animations/animateddiv";
@@ -20,6 +24,10 @@ export default function AllProjects() {
   const [showNubengine, setShowNubengine] = useState(false);
   const [showPortoDaffa, setShowPortoDaffa] = useState(false);
   const [showPortoFahd, setShowPortoFahd] = useState(false);
+  const [showBlogAPI, setShowBlogAPI] = useState(false);
+  const [showTodolistAPI, setShowTodolistAPI] = useState(false);
+  const [showJWTTemplate, setShowJWTTemplate] = useState(false);
+  const [showNewPorto, setShowNewPorto] = useState(false);
   const [showTools, setShowTools] = useState(false);
 
   return (
@@ -30,7 +38,7 @@ export default function AllProjects() {
         </span>
       </AnimatedDiv>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <AnimatedDiv className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-7/12 h-80 lg:h-96 mt-4 sm:mt-6">
           {showTodolist ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -42,22 +50,32 @@ export default function AllProjects() {
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Typescript
+                    TypeScript
                   </span>
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    React.js
+                    Next.js
                   </span>
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Vite.js
+                    Express.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    MongoDB
                   </span>
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
                     Tailwind
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    GCP
                   </span>
                 </div>
                 <div>
@@ -70,9 +88,8 @@ export default function AllProjects() {
                 <span>Todolist</span>
               </div>
               <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
-                <span>A todolist that serves as a</span>
-                <span>final project for the GDSC Web</span>
-                <span>Development program featuring</span>
+                <span>A full stack web application</span>
+                <span>featuring JWT Authentication,</span>
                 <span>priority flags, task editing, and</span>
                 <span>task creating capabilities.</span>
               </div>
@@ -106,7 +123,7 @@ export default function AllProjects() {
             </div>
           </div>
         </AnimatedDiv>
-        <AnimatedDiv className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-5/12 h-80 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           {showPomodoro ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -118,12 +135,7 @@ export default function AllProjects() {
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Typescript
-                  </span>
-                </div>
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
-                    React.js
+                    TypeScript
                   </span>
                 </div>
                 <div>
@@ -184,7 +196,7 @@ export default function AllProjects() {
         </AnimatedDiv>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <AnimatedDiv className="relative w-full lg:w-5/12 lg:h-96 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-5/12 h-80 lg:h-96 mt-4 sm:mt-6">
           {showInvite ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -211,17 +223,17 @@ export default function AllProjects() {
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
+                    Tailwind
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
                     Docker
                   </span>
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
                     GCP
-                  </span>
-                </div>
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
-                    Tailwind
                   </span>
                 </div>
               </div>
@@ -264,7 +276,7 @@ export default function AllProjects() {
             </div>
           </div>
         </AnimatedDiv>
-        <AnimatedDiv className="relative w-full lg:w-7/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-7/12 h-80 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           {showNubengine ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -286,12 +298,12 @@ export default function AllProjects() {
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    GCP
+                    Tailwind
                   </span>
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Tailwind
+                    GCP
                   </span>
                 </div>
               </div>
@@ -338,7 +350,7 @@ export default function AllProjects() {
         </AnimatedDiv>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
-        <AnimatedDiv className="relative w-full lg:w-7/12 lg:h-96 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-7/12 h-80 lg:h-96 mt-4 sm:mt-6">
           {showPortoDaffa ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -350,12 +362,7 @@ export default function AllProjects() {
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Typescript
-                  </span>
-                </div>
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
-                    React.js
+                    TypeScript
                   </span>
                 </div>
                 <div>
@@ -414,7 +421,7 @@ export default function AllProjects() {
             </div>
           </div>
         </AnimatedDiv>
-        <AnimatedDiv className="relative w-full lg:w-5/12 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+        <AnimatedDiv className="relative w-full lg:w-5/12 h-80 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
           {showPortoFahd ? (
             <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
               <button
@@ -426,7 +433,7 @@ export default function AllProjects() {
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Typescript
+                    TypeScript
                   </span>
                 </div>
                 <div>
@@ -437,11 +444,6 @@ export default function AllProjects() {
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
                     Tailwind
-                  </span>
-                </div>
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
-                    Vim
                   </span>
                 </div>
                 <div>
@@ -492,6 +494,314 @@ export default function AllProjects() {
         </AnimatedDiv>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
+        <AnimatedDiv className="relative w-full lg:w-5/12 h-80 lg:h-96 mt-4 sm:mt-6">
+          {showBlogAPI ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowBlogAPI(!showBlogAPI)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Go
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Gin
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    MongoDB
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Atlas
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Koyeb
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
+                <span>Blog API</span>
+              </div>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>The back end REST API for</span>
+                <span>my portfolio's blog section</span>
+                <span>that utilizes Gin-gonic.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute top-5 left-5 z-10 rounded-3xl">
+              <button onClick={() => setShowBlogAPI(!showBlogAPI)}>
+                <ChevronDownIcon className="h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
+          <Image
+            className="rounded-3xl h-full object-cover"
+            src={blogapi}
+            alt="Blog API"
+            quality={100}
+            priority={true}
+          />
+          <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
+            <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
+              <span className="text-base sm:text-xl font-medium">Blog API</span>
+              <a
+                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
+                href="https://github.com/daffafaizan/blog-api"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Open</span>
+                <HiOutlineExternalLink />
+              </a>
+            </div>
+          </div>
+        </AnimatedDiv>
+        <AnimatedDiv className="relative w-full lg:w-7/12 h-80 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+          {showTodolistAPI ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowTodolistAPI(!showTodolistAPI)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    JavaScript
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Express.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    PostgreSQL
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    ElephantSQL
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    GCP
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
+                <span>Todolist API</span>
+              </div>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>The back end REST</span>
+                <span>API for my full stack</span>
+                <span>app that utilizes JWT.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute top-5 left-5 z-10 rounded-3xl">
+              <button onClick={() => setShowTodolistAPI(!showTodolistAPI)}>
+                <ChevronDownIcon className="h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
+          <Image
+            className="rounded-3xl h-full object-cover"
+            src={todolistapi}
+            alt="Todolist API"
+            quality={100}
+            priority={true}
+          />
+          <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
+            <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
+              <span className="text-base sm:text-xl font-medium">
+                Todolist API
+              </span>
+              <a
+                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
+                href="http://github.com/daffafaizan/todolist-be"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Open</span>
+                <HiOutlineExternalLink />
+              </a>
+            </div>
+          </div>
+        </AnimatedDiv>
+      </div>
+      <div className="w-full flex flex-col lg:flex-row justify-center items-center">
+        <AnimatedDiv className="relative w-full lg:w-7/12 h-80 lg:h-96 mt-4 sm:mt-6">
+          {showNewPorto ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowNewPorto(!showNewPorto)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    TypeScript
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    JavaScript
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Next.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Express.js
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    MongoDB
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Tailwind
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Atlas
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Netlify
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
+                <span>Daffa's</span>
+                <span>Portfolio</span>
+              </div>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>My portfolio website featuring</span>
+                <span>finished projects, technologies,</span>
+                <span>a blog, and socials.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute top-5 left-5 z-10 rounded-3xl">
+              <button onClick={() => setShowNewPorto(!showNewPorto)}>
+                <ChevronDownIcon className="h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
+          <Image
+            className="rounded-3xl h-full object-cover"
+            src={portodaffanew}
+            alt="Daffa's Portfolio"
+            quality={100}
+            priority={true}
+          />
+          <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
+            <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
+              <span className="text-base sm:text-xl font-medium">Daffa's</span>
+              <a
+                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
+                href="https://daffafaizan.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Open</span>
+                <HiOutlineExternalLink />
+              </a>
+            </div>
+          </div>
+        </AnimatedDiv>
+        <AnimatedDiv className="relative w-full lg:w-5/12 h-80 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+          {showJWTTemplate ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowJWTTemplate(!showJWTTemplate)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    JavaScript
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Express.js
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
+                <span>JWT Express.js</span>
+                <span>Template</span>
+              </div>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>An Express.js template for</span>
+                <span>JWT authentication and</span>
+                <span>authorization featuring</span>
+                <span>basic user management.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute top-5 left-5 z-10 rounded-3xl">
+              <button onClick={() => setShowJWTTemplate(!showJWTTemplate)}>
+                <ChevronDownIcon className="h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
+          <Image
+            className="rounded-3xl h-full object-cover"
+            src={jwtexpress}
+            alt="JWT Express.js Template"
+            quality={100}
+            priority={true}
+          />
+          <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
+            <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
+              <span className="text-base sm:text-xl font-medium">
+                JWT Template
+              </span>
+              <a
+                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
+                href="https://github.com/daffafaizan/jwt-express"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Open</span>
+                <HiOutlineExternalLink />
+              </a>
+            </div>
+          </div>
+        </AnimatedDiv>
+      </div>
+
+      <div className="w-full flex flex-col lg:flex-row justify-center items-center">
         <AnimatedDiv className="relative w-full lg:h-96 mt-4 sm:mt-6">
           <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
             <div className="absolute flex flex-col bottom-5 p-2 right-5 text-md sm:text-lg text-right text-white gap-2">
@@ -504,7 +814,8 @@ export default function AllProjects() {
               </a>
             </div>
             <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
-              <span>Ready to code</span>
+              <span>Interested to</span>
+              <span>work with me?</span>
             </div>
             <div className="absolute flex flex-col top-5 right-5 p-3 text-sm sm:text-lg md:text-xl text-right break-normal text-white">
               <span>My to-do list is begging for partners.</span>
