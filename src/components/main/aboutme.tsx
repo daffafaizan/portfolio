@@ -9,7 +9,7 @@ export default function AboutMe() {
         </span>
       </div>
       <div className="w-full text-justify mt-4 sm:mt-6">
-        <span className="text-lg sm:text-2xl lg:text-4xl md:leading-loose">
+        <span className="text-md sm:text-2xl lg:text-4xl md:leading-loose">
           Daffa, a third-year Computer Science Undergraduate at the University
           of Indonesia, is a dedicated Full Stack Developer with a strong
           background in Software Engineering. Recognized for his passionate and

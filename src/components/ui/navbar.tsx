@@ -9,7 +9,7 @@ export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
   return (
     <>
-      <div className="fixed flex flex-row items-center justify-between text-white top-0 h-16 z-30 w-full px-7 bg-[#101820]/10 backdrop-blur-md">
+      <div className="fixed flex flex-row items-center justify-between text-white top-0 h-16 z-30 w-full px-7 bg-[#101820]/20 backdrop-blur-md">
         <div className="flex flex-col justify-center items-center">
           <a href="/">
             <span className="text-xl">
