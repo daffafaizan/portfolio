@@ -18,7 +18,7 @@ export default function AnimatedPage({ children }: { children: any }) {
     <AnimatePresence mode="wait">
       <motion.div>
         <motion.div
-          className="fixed flex justify-center items-center w-screen z-50 top-0 bg-[#F5F5F5]"
+          className="fixed flex justify-center items-center w-screen z-50 top-0 bg-black/10 backdrop-blur-md"
           transition={transitionSpringPhysics}
           initial={{ height: "100vh" }}
           animate={{
