@@ -9,8 +9,6 @@ export default function AllBlogs() {
     await fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log("hello");
-        console.log(data);
         setPosts(data);
       });
   }, [url]);
