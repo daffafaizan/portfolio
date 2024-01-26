@@ -92,16 +92,16 @@ export default function Blog({ params }: { params: { slug: string } }) {
   return (
     <AnimatedPage>
       <main className="flex flex-col items-center p-4">
-        <div className="min-h-screen w-full sm:w-5/6 md:w-[640px] flex flex-col items-center mt-16 sm:mt-32 px-2 pb-4">
+        <div className="min-h-screen w-full sm:w-5/6 md:w-[640px] flex flex-col items-center text-white mt-16 sm:mt-32 px-2 pb-4">
           <AnimatedDiv className="w-full flex flex-col text-left gap-2">
             <span className="text-2xl sm:text-4xl font-semibold">
               {data.title}
             </span>
             <div className="w-full flex flex-row items-center text-sm">
-              <span className="border-r border-r-black pr-2">
+              <span className="border-r border-r-white pr-2">
                 {data.postAuthor}
               </span>
-              <span className="pl-2 text-gray-700">
+              <span className="pl-2 text-gray-600">
                 {formatDate(data.createdAt)}
               </span>
             </div>
@@ -135,7 +135,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
                 className={`h-6 w-6 ${
                   showComments
                     ? "text-[#45b8ac] hover:text-[#3ea69b]"
-                    : "text-black hover:text-[#45b8ac]"
+                    : "text-white hover:text-[#45b8ac]"
                 } hover:text-[#45b8ac]`}
                 onClick={() => setShowComments(!showComments)}
               />
@@ -151,12 +151,12 @@ export default function Blog({ params }: { params: { slug: string } }) {
                           className="w-full flex flex-col items-center gap-2"
                         >
                           <div className="w-full flex flex-row items-center gap-2">
-                            <div className="h-7 w-7 aspect-square flex items-center justify-center border border-black rounded-full">
+                            <div className="h-7 w-7 aspect-square flex items-center justify-center border border-white rounded-full">
                               <RxPerson />
                             </div>
                             <div className="w-full flex flex-col">
                               <span>{comment.commentAuthor}</span>
-                              <span className="text-xs text-gray-700">
+                              <span className="text-xs text-gray-400">
                                 {formatDateWithoutDay(comment.createdAt)}
                               </span>
                             </div>
@@ -187,7 +187,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
                         />
                         <button
                           type="submit"
-                          className="w-full bg-gray-100 hover:bg-gray-200 rounded-sm mt-1 py-2"
+                          className="w-full text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-sm mt-1 py-2"
                         >
                           Send
                         </button>
