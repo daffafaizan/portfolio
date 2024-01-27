@@ -117,10 +117,11 @@ export default function Blog({ params }: { params: { slug: string } }) {
                     <SyntaxHighlighter
                       {...rest}
                       PreTag="div"
-                      children={String(children).replace(/\n$/, "")}
                       language={match[1]}
                       style={dark}
-                    />
+                    >
+                      {String(children).replace(/\n$/, "")}
+                    </SyntaxHighlighter>
                   ) : (
                     <code {...rest}>{children}</code>
                   );
