@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AnimatedDiv from "../animations/animateddiv";
 
 interface BlogPreviewProps {
   slug: string;
@@ -24,7 +25,7 @@ export default function BlogPreview({
     year: "numeric",
   });
   return (
-    <div className="relative w-full">
+    <AnimatedDiv className="relative w-full">
       <div className="absolute top-2 left-2 z-10 h-56 w-full rounded-sm bg-white">
         Test
       </div>
@@ -52,6 +53,6 @@ export default function BlogPreview({
           </span>
         </Link>
       </div>
-    </div>
+    </AnimatedDiv>
   );
 }
