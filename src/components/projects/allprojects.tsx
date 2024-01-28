@@ -813,11 +813,11 @@ export default function AllProjects() {
                 <span>Let's chat.</span>
               </a>
             </div>
-            <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
+            <div className="absolute flex flex-col bottom-5 left-5 p-2 text-lg sm:text-3xl text-white">
               <span>Interested to</span>
               <span>work with me?</span>
             </div>
-            <div className="absolute flex flex-col top-5 right-5 p-3 text-sm sm:text-lg md:text-xl text-right break-normal text-white">
+            <div className="absolute flex flex-col top-5 right-5 p-3 text-[12px] sm:text-lg md:text-xl text-right break-normal text-white">
               <span>My to-do list is begging for partners.</span>
               <span>My calendar's open, my coffee's brewed,</span>
               <span>I'm ready to make magic happen - you in?</span>
