@@ -6,6 +6,10 @@ const CURR_PORTFOLIO_LINK = "https://daffafaizan.com";
 const BLOG_API_LINK = "https://github.com/daffafaizan/blog-api";
 const TODOLIST_API_LINK = "http://github.com/daffafaizan/todolist-be";
 const JWT_TEMPLATE_LINK = "https://github.com/daffafaizan/jwt-express";
+const GITHUB_LINK = "https://github.com/daffafaizan";
+const LINKEDIN_LINK = "https://linkedin.com/in/daffa-muhammad-faizan";
+const EMAIL_LINK =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=daffamfzn@gmail.com";
 
 export {
   VLECTURE_LINK,
@@ -16,4 +20,7 @@ export {
   BLOG_API_LINK,
   TODOLIST_API_LINK,
   JWT_TEMPLATE_LINK,
+  GITHUB_LINK,
+  LINKEDIN_LINK,
+  EMAIL_LINK,
 };

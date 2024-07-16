@@ -23,7 +23,7 @@ import {
   VLECTURE_LINK,
 } from "./links";
 
-const projects = [
+export const projects = [
   {
     title: "Dermatify",
     description:

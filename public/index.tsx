@@ -1,7 +1,7 @@
 import bangkit from "./Bangkit/bangkit.jpg";
 import dermatify from "./Dermatify/Dermatify.png";
-import iisma from "./IISMA/Iisma Logo White.png";
-import invite from "./Invite/Scene 1.png";
+import iisma from "./IISMA/IismaWhite.png";
+import invite from "./Invite/invite.png";
 import nubengine from "./Nubengine/MacBook-Pro-16 (1).png";
 import openway from "./OpenWay/OW_Logotype_RGB_99x28_s2.png";
 import pomodoro from "./Pomodoro/Shot.png";
@@ -13,6 +13,7 @@ import vlecture from "./Vlecture/Vlecture.jpg";
 import blogApi from "./API/blogapi.png";
 import todolistAPI from "./API/todolistapi.png";
 import jwttemplate from "./API/jwtexpress.png";
+import profilepicture from "./new_pp_large.jpg";
 
 export {
   bangkit,
@@ -30,4 +31,5 @@ export {
   blogApi,
   todolistAPI,
   jwttemplate,
+  profilepicture,
 };
