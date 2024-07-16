@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { paths } from "@/data/paths";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
@@ -18,30 +19,15 @@ export default function Navbar() {
           </a>
         </div>
         <div className="hidden md:flex flex-row justify-center items-center text-xl gap-6">
-          <div>
-            <a href="/">
-              <span className="hover:text-[#45b8ac] duration-150">Home</span>
-            </a>
-          </div>
-          <div>
-            <a href="/projects">
-              <span className="hover:text-[#45b8ac] duration-150">
-                Projects
-              </span>
-            </a>
-          </div>
-          <div>
-            <a href="/blog">
-              <span className="hover:text-[#45b8ac] duration-150">Blog</span>
-            </a>
-          </div>
-          <div>
-            <a href="/me">
-              <span className="hover:text-[#45b8ac] duration-150">
-                About me
-              </span>
-            </a>
-          </div>
+          {paths.map((path) => (
+            <div key={path.name}>
+              <a href={path.href}>
+                <span className="hover:text-[#45b8ac] duration-150">
+                  {path.name}
+                </span>
+              </a>
+            </div>
+          ))}
         </div>
         <div className="md:hidden flex flex-col justify-center items-center">
           {showNavbar ? (
@@ -61,46 +47,19 @@ export default function Navbar() {
         }`}
       >
         <div className="w-full h-full flex flex-col justify-center items-center text-white bg-[#101820]/10 backdrop-blur-md text-xl font-medium gap-12">
-          {pathName !== "/" ? (
-            <div>
+          {paths.map((path) => (
+            <div key={path.name}>
               <a href="/">
-                <span className="hover:text-[#45b8ac] duration-150">Home</span>
-              </a>
-            </div>
-          ) : (
-            <></>
-          )}
-          {pathName !== "/projects" ? (
-            <div>
-              <a href="/projects">
-                <span className="hover:text-[#45b8ac] duration-150">
-                  Projects
+                <span
+                  className={`hover:text-[#45b8ac] duration-150 ${
+                    pathName !== path.href ? "" : "hidden"
+                  }`}
+                >
+                  {path.name}
                 </span>
               </a>
             </div>
-          ) : (
-            <></>
-          )}
-          {pathName !== "/blog" ? (
-            <div>
-              <a href="/blog">
-                <span className="hover:text-[#45b8ac] duration-150">Blog</span>
-              </a>
-            </div>
-          ) : (
-            <></>
-          )}
-          {pathName !== "/me" ? (
-            <div>
-              <a href="/me">
-                <span className="hover:text-[#45b8ac] duration-150">
-                  About me
-                </span>
-              </a>
-            </div>
-          ) : (
-            <></>
-          )}
+          ))}
         </div>
       </div>
     </>
