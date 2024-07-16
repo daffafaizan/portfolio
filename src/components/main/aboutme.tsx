@@ -1,5 +1,7 @@
 "use client";
 
+import { main } from "@/data/bio";
+
 export default function AboutMe() {
   return (
     <div className="min-h-screen w-full sm:w-5/6 flex flex-col justify-center items-center text-white px-2 py-4">
@@ -10,13 +12,7 @@ export default function AboutMe() {
       </div>
       <div className="w-full text-justify mt-4 sm:mt-6">
         <span className="text-md sm:text-2xl lg:text-4xl md:leading-loose">
-          Daffa, a third-year Computer Science Undergraduate at the University
-          of Indonesia, is a dedicated Full Stack Developer with a strong
-          background in Software Engineering. Recognized for his passionate and
-          enthusiastic approach to both studies and work, Daffa has successfully
-          broadened his skill set. Specializing in both Front End and Back End
-          Development, he excels in creating comprehensive solutions that
-          leverage his well-rounded proficiency in software development.
+          {main}
         </span>
       </div>
       <div className="w-full mt-4 sm:mt-6">

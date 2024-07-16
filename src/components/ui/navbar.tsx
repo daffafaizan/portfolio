@@ -49,7 +49,7 @@ export default function Navbar() {
         <div className="w-full h-full flex flex-col justify-center items-center text-white bg-[#101820]/10 backdrop-blur-md text-xl font-medium gap-12">
           {paths.map((path) => (
             <div key={path.name}>
-              <a href="/">
+              <a href={path.href}>
                 <span className={`hover:text-[#45b8ac] duration-150`}>
                   {path.name}
                 </span>
