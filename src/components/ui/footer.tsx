@@ -1,4 +1,4 @@
-import { FiGithub, FiMail, FiLinkedin } from "react-icons/fi";
+import { socials } from "@/data/socials";
 
 export default function Footer() {
   return (
@@ -13,27 +13,16 @@ export default function Footer() {
           <span>All rights reserved.</span>
         </div>
         <div className="flex flex-row justify-center items-center gap-4 md:gap-6 md:text-xl">
-          <a
-            className="hover:text-[#45b8ac] duration-150"
-            href="https://github.com/daffafaizan"
-            target="__blank"
-          >
-            <FiGithub />
-          </a>
-          <a
-            className="hover:text-[#45b8ac] duration-150"
-            href="https://linkedin.com/in/daffa-muhammad-faizan"
-            target="__blank"
-          >
-            <FiLinkedin />
-          </a>
-          <a
-            className="hover:text-[#45b8ac] duration-150"
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=daffamfzn@gmail.com"
-            target="__blank"
-          >
-            <FiMail />
-          </a>
+          {socials.map((data) => (
+            <a
+              key={data.href}
+              className="hover:text-[#45b8ac] duration-150"
+              href={data.href}
+              target="__blank"
+            >
+              {data.icon}
+            </a>
+          ))}
         </div>
       </div>
     </div>
