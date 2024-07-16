@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import pomodoro from "../../../public/Pomodoro/Shot.png";
-import invite from "../../../public/Invite/Scene 1.png";
+import invite from "../../../public/Invite/invite.png";
 import nubengine from "../../../public/Nubengine/MacBook-Pro-16 (1).png";
 import todolist from "../../../public/Todolist/Shot (14).png";
 import portodaffa from "../../../public/Portfolio/Dark (1).png";
