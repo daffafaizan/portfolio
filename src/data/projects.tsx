@@ -138,7 +138,7 @@ export const projects: Project[] = [
   },
   {
     id: 11,
-    title: "Daffa's New Portfolio",
+    title: "Portfolio",
     description: "My current portfolio website.",
     link: CURR_PORTFOLIO_LINK,
     image: portfolioNew,

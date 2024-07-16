@@ -50,11 +50,7 @@ export default function Navbar() {
           {paths.map((path) => (
             <div key={path.name}>
               <a href="/">
-                <span
-                  className={`hover:text-[#45b8ac] duration-150 ${
-                    pathName !== path.href ? "" : "hidden"
-                  }`}
-                >
+                <span className={`hover:text-[#45b8ac] duration-150`}>
                   {path.name}
                 </span>
               </a>

@@ -14,6 +14,7 @@ import blogApi from "./API/blogapi.png";
 import todolistAPI from "./API/todolistapi.png";
 import jwttemplate from "./API/jwtexpress.png";
 import profilepicture from "./new_pp_large.jpg";
+import wallpaper from "./Misc/wp1.jpg";
 
 export {
   bangkit,
@@ -32,4 +33,5 @@ export {
   todolistAPI,
   jwttemplate,
   profilepicture,
+  wallpaper,
 };
