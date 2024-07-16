@@ -102,7 +102,7 @@ export const projects: Project[] = [
   },
   {
     id: 7,
-    title: "Daffa's Old Portfolio",
+    title: "Daffa's",
     description:
       "My first iteration of a portfolio website featuring finished projects, experiences, technologies, and socials.",
     link: OLD_PORTFOLIO_LINK,
@@ -111,7 +111,7 @@ export const projects: Project[] = [
   },
   {
     id: 8,
-    title: "Fahd's Portfolio",
+    title: "Fahd's",
     description:
       "For my brother, a website to share his experiences, achievements, and opinions.",
     link: "",
