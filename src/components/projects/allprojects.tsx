@@ -13,6 +13,8 @@ import wallpaper from "../../../public/Misc/wp1.jpg";
 import todolistapi from "../../../public/API/todolistapi.png";
 import blogapi from "../../../public/API/blogapi.png";
 import jwtexpress from "../../../public/API/jwtexpress.png";
+import vlecture from "../../../public/Vlecture/Vlecture.jpg";
+import dermatify from "../../../public/Dermatify/Dermatify.png";
 import tools from "@/data/tools";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import AnimatedDiv from "../animations/animateddiv";
@@ -28,6 +30,8 @@ export default function AllProjects() {
   const [showTodolistAPI, setShowTodolistAPI] = useState(false);
   const [showJWTTemplate, setShowJWTTemplate] = useState(false);
   const [showNewPorto, setShowNewPorto] = useState(false);
+  const [showVlecture, setShowVlecture] = useState(false);
+  const [showDermatify, setShowDermatify] = useState(false);
   const [showTools, setShowTools] = useState(false);
 
   return (
@@ -36,6 +40,169 @@ export default function AllProjects() {
         <span className="text-3xl sm:text-5xl lg:text-7xl font-semibold text-white">
           Projects
         </span>
+      </div>
+
+      <div className="w-full flex flex-col lg:flex-row justify-center items-center">
+        <div className="relative w-full lg:w-5/12 h-80 lg:h-96 mt-4 sm:mt-6">
+          {showDermatify ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowDermatify(!showDermatify)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    HapiJS
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    FastAPI
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Firestore
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Cloud Bucket
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Terraform
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    GCP
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
+                <span>Dermatify</span>
+              </div>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>A capstone project for Bangkit</span>
+                <span>Academy 2024 that aims to increase</span>
+                <span>awareness regarding skin health</span>
+                <span>issues and its treatments.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute top-5 left-5 z-10 rounded-3xl">
+              <button onClick={() => setShowDermatify(!showDermatify)}>
+                <ChevronDownIcon className="h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
+          <Image
+            className="rounded-3xl h-full object-cover"
+            src={dermatify}
+            alt="dermatify"
+            quality={100}
+            priority={true}
+          />
+          <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
+            <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
+              <span className="text-base sm:text-xl font-medium">
+                Dermatify
+              </span>
+              <a
+                className="flex flex-row pointer-events-none justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Open</span>
+                <HiOutlineExternalLink />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="relative w-full lg:w-7/12 h-80 lg:h-96 lg:ml-6 mt-4 sm:mt-6">
+          {showVlecture ? (
+            <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
+              <button
+                className="absolute top-5 left-5"
+                onClick={() => setShowVlecture(!showVlecture)}
+              >
+                <ChevronUpIcon className="h-8 w-8 text-white" />
+              </button>
+              <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    OpenAI
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    FastAPI
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    Next.jS
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    PostgreSQL
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    TailwindCSS
+                  </span>
+                </div>
+                <div>
+                  <span className="border border-white px-2 py-1 rounded-full">
+                    AWS
+                  </span>
+                </div>
+              </div>
+              <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
+                <span>Vlecture</span>
+              </div>
+              <div className="hidden absolute xl:flex flex-col bottom-5 right-5 p-3 text-md text-right text-white">
+                <span>A PWA that helps students record</span>
+                <span>lectures and transform them to</span>
+                <span>notes, flashcards, and quizzes.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute top-5 left-5 z-10 rounded-3xl">
+              <button onClick={() => setShowVlecture(!showVlecture)}>
+                <ChevronDownIcon className="h-8 w-8 text-white" />
+              </button>
+            </div>
+          )}
+          <Image
+            className="rounded-3xl h-full object-cover"
+            src={vlecture}
+            alt="vlecture"
+            quality={100}
+            priority={true}
+          />
+          <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
+            <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
+              <span className="text-base sm:text-xl font-medium">Vlecture</span>
+              <a
+                className="flex flex-row justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl"
+                href="https://app.vlecture.tech/auth/login"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Open</span>
+                <HiOutlineExternalLink />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
         <div className="relative w-full lg:w-7/12 h-80 lg:h-96 mt-4 sm:mt-6">
@@ -48,11 +215,6 @@ export default function AllProjects() {
                 <ChevronUpIcon className="h-8 w-8 text-white" />
               </button>
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
-                    TypeScript
-                  </span>
-                </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
                     Next.js
@@ -70,7 +232,7 @@ export default function AllProjects() {
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Tailwind
+                    TailwindCSS
                   </span>
                 </div>
                 <div>
@@ -135,17 +297,12 @@ export default function AllProjects() {
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    TypeScript
-                  </span>
-                </div>
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
                     Vite.js
                   </span>
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Tailwind
+                    TailwindCSS
                   </span>
                 </div>
                 <div>
@@ -208,11 +365,6 @@ export default function AllProjects() {
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Python
-                  </span>
-                </div>
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
                     Django
                   </span>
                 </div>
@@ -223,7 +375,7 @@ export default function AllProjects() {
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Tailwind
+                    TailwindCSS
                   </span>
                 </div>
                 <div>
@@ -288,17 +440,12 @@ export default function AllProjects() {
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Python
-                  </span>
-                </div>
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
                     Django
                   </span>
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Tailwind
+                    TailwindCSS
                   </span>
                 </div>
                 <div>
@@ -362,17 +509,12 @@ export default function AllProjects() {
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    TypeScript
-                  </span>
-                </div>
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
                     Vite.js
                   </span>
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Tailwind
+                    TailwindCSS
                   </span>
                 </div>
                 <div>
@@ -433,17 +575,12 @@ export default function AllProjects() {
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    TypeScript
-                  </span>
-                </div>
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
                     Next.js
                   </span>
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Tailwind
+                    TailwindCSS
                   </span>
                 </div>
                 <div>
@@ -504,11 +641,6 @@ export default function AllProjects() {
                 <ChevronUpIcon className="h-8 w-8 text-white" />
               </button>
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
-                    Go
-                  </span>
-                </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
                     Gin
@@ -578,11 +710,6 @@ export default function AllProjects() {
                 <ChevronUpIcon className="h-8 w-8 text-white" />
               </button>
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
-                    JavaScript
-                  </span>
-                </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
                     Express.js
@@ -658,16 +785,6 @@ export default function AllProjects() {
               <div className="absolute flex flex-col top-5 px-2 right-5 text-md text-right text-white gap-2">
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    TypeScript
-                  </span>
-                </div>
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
-                    JavaScript
-                  </span>
-                </div>
-                <div>
-                  <span className="border border-white px-2 py-1 rounded-full">
                     Next.js
                   </span>
                 </div>
@@ -683,7 +800,7 @@ export default function AllProjects() {
                 </div>
                 <div>
                   <span className="border border-white px-2 py-1 rounded-full">
-                    Tailwind
+                    TailwindCSS
                   </span>
                 </div>
                 <div>
