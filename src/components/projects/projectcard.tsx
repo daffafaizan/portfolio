@@ -6,9 +6,21 @@ import { Project } from "@/interfaces/project";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const [showProject, setShowProject] = useState(false);
+  const determineWidth = (id: number) => {
+    const arr = [1, 4, 5, 8, 9, 12, 13];
+    if (arr.includes(id)) {
+      return "lg:col-span-1";
+    } else {
+      return "lg:col-span-2";
+    }
+  };
   return (
     <>
-      <div className="relative w-full lg:w-5/12 h-80 lg:h-96 mt-4 sm:mt-6">
+      <div
+        className={`relative col-span-1 ${determineWidth(
+          project.id,
+        )} h-80 lg:h-96`}
+      >
         {showProject ? (
           <div className="absolute w-full h-full z-10 ease-in-out duration-300 rounded-3xl bg-black bg-opacity-80">
             <button
