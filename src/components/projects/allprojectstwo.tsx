@@ -1,9 +1,8 @@
 import { useState } from "react";
-import tools from "@/data/tools";
-import { Icon } from "@iconify/react/dist/iconify.js";
 import AnimatedDiv from "../animations/animateddiv";
 import { projects } from "@/data/projects";
 import ProjectCard from "./projectcard";
+import ToolsCard from "./toolscard";
 
 export default function AllProjectsTwo() {
   const [showTools, setShowTools] = useState(false);
@@ -34,31 +33,8 @@ export default function AllProjectsTwo() {
           <span>Tools I use.</span>
         </button>
       </div>
-      {showTools ? (
-        <div
-          className={`w-full flex flex-row flex-wrap justify-center items-center gap-6 mt-8 transition transform ease-in-out duration-300 ${
-            showTools ? "translate-x-0" : "-translate-x-full"
-          }`}
-        >
-          {tools.map((tool) => (
-            <div key={tool.id} className="flex justify-center items-center">
-              <Icon className="h-14 w-14 lg:h-20 lg:w-20" icon={tool.icon} />
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div
-          className={`w-full flex flex-row flex-wrap justify-center items-center gap-6 mr-[500px] mt-8 transition transform ease-in-out duration-300 ${
-            showTools ? "translate-x-0" : "-translate-x-full"
-          }`}
-        >
-          {tools.map((tool) => (
-            <div key={tool.id} className="flex justify-center items-center">
-              <Icon className="h-14 w-14 lg:h-20 lg:w-20" icon={tool.icon} />
-            </div>
-          ))}
-        </div>
-      )}
+
+      <ToolsCard showTools={showTools} setShowTools={setShowTools} />
     </AnimatedDiv>
   );
 }
