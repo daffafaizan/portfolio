@@ -16,7 +16,10 @@ import {
 import {
   BLOG_API_LINK,
   CURR_PORTFOLIO_LINK,
+  DERMATIFY_LINK,
+  INVITE_LINK,
   JWT_TEMPLATE_LINK,
+  NUBENGINE_LINK,
   OLD_PORTFOLIO_LINK,
   POMODORO_LINK,
   TODOLIST_API_LINK,
@@ -29,9 +32,10 @@ export const projects: Project[] = [
     id: 1,
     title: "Dermatify",
     description:
-      "A capstone project for Bangkit Academy 2024 that aims to increase awareness regarding skin issues and its treatments.",
-    link: "",
+      "A capstone project for Bangkit Academy 2024 that aims to increase skin issues awareness and its treatments.",
+    link: DERMATIFY_LINK,
     image: dermatify,
+    status: "INACTIVE",
     technologies: [
       "HapiJS",
       "FastAPI",
@@ -48,6 +52,7 @@ export const projects: Project[] = [
       "A PWA that helps students record lectures and transforms them into notes, flashcards, and quizzes.",
     link: VLECTURE_LINK,
     image: vlecture,
+    status: "ACTIVE",
     technologies: [
       "FastAPI",
       "NextJS",
@@ -64,6 +69,7 @@ export const projects: Project[] = [
       "A full stack web application featuring JWT authentication, priority flags, and task manipulation capabilities.",
     link: TODOLIST_LINK,
     image: todolist,
+    status: "ACTIVE",
     technologies: [
       "NextJS",
       "ExpressJS",
@@ -80,6 +86,7 @@ export const projects: Project[] = [
       "A productivity tool utilizing the pomodoro technique featuring a soothing alarm to keep you focused.",
     link: POMODORO_LINK,
     image: pomodoro,
+    status: "ACTIVE",
     technologies: ["ViteJS", "TailwindCSS", "Netlify"],
   },
   {
@@ -87,8 +94,9 @@ export const projects: Project[] = [
     title: "Invite",
     description:
       "A team-matcher project for the Software Engineering class for students to find teams to participate in a competition.",
-    link: "",
+    link: INVITE_LINK,
     image: invite,
+    status: "INACTIVE",
     technologies: ["Django", "PostgreSQL", "TailwindCSS", "Docker", "GCP"],
   },
   {
@@ -96,8 +104,9 @@ export const projects: Project[] = [
     title: "Nubengine",
     description:
       "A project for the Information Retrieval class utilizing TF-IDF for indexing and uses medical datasets from ir-datasets.",
-    link: "",
+    link: NUBENGINE_LINK,
     image: nubengine,
+    status: "INACTIVE",
     technologies: ["Django", "TailwindCSS", "GCP"],
   },
   {
@@ -107,6 +116,7 @@ export const projects: Project[] = [
       "My first iteration of a portfolio website featuring finished projects, experiences, technologies, and socials.",
     link: OLD_PORTFOLIO_LINK,
     image: portfolioOld,
+    status: "ACTIVE",
     technologies: ["ViteJS", "TailwindCSS", "Netlify"],
   },
   {
@@ -116,6 +126,7 @@ export const projects: Project[] = [
       "For my brother, a website to share his experiences, achievements, and opinions.",
     link: "",
     image: portfolioFahd,
+    status: "INACTIVE",
     technologies: ["NextJS", "TailwindCSS", "Netlify"],
   },
   {
@@ -125,6 +136,7 @@ export const projects: Project[] = [
       "The back end REST API for my portfolio's blog section utilizing gin.",
     link: BLOG_API_LINK,
     image: blogApi,
+    status: "ACTIVE",
     technologies: ["Gin", "MongoDB", "Atlas", "Koyeb"],
   },
   {
@@ -134,6 +146,7 @@ export const projects: Project[] = [
       "The back end REST API for my todolist app that utilizes ExpressJS features JWT authentication.",
     link: TODOLIST_API_LINK,
     image: todolistAPI,
+    status: "ACTIVE",
     technologies: ["ExpressJS", "PostgreSQL", "ElephantSQL", "GCP"],
   },
   {
@@ -142,6 +155,7 @@ export const projects: Project[] = [
     description: "My current portfolio website.",
     link: CURR_PORTFOLIO_LINK,
     image: portfolioNew,
+    status: "ACTIVE",
     technologies: ["NextJS", "TailwindCSS", "Netlify"],
   },
   {
@@ -151,6 +165,7 @@ export const projects: Project[] = [
       "A public ExpressJS template for JWT authentication and authorization featuring basic user management.",
     link: JWT_TEMPLATE_LINK,
     image: jwttemplate,
+    status: "ACTIVE",
     technologies: ["ExpressJS"],
   },
 ];
