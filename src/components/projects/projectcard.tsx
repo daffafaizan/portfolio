@@ -74,6 +74,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               className={`flex flex-row ${
                 project.link == "" ? "pointer-events-none" : ""
               } justify-between items-center -mr-1 sm:-mr-2 px-2 py-1 sm:px-3 sm:py-2 gap-1 bg-[#45b8ac] hover:bg-[#3ea69b] duration-150 text-base sm:text-xl font-medium text-white rounded-xl`}
+              href={project.link}
               target="_blank"
               rel="noopener noreferrer"
             >
