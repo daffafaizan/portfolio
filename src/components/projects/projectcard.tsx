@@ -41,7 +41,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             <div className="absolute flex flex-col bottom-5 left-5 p-2 text-xl sm:text-3xl text-white">
               <span>{project.title}</span>
             </div>
-            <div className="hidden absolute xl:flex flex-col w-1/2 bottom-5 right-5 p-3 text-md text-right text-white">
+            <div className="hidden absolute xl:flex flex-col w-1/2 bottom-5 right-5 p-3 text-sm text-right text-white">
               <span>{project.description}</span>
             </div>
           </div>

@@ -16,7 +16,10 @@ import {
 import {
   BLOG_API_LINK,
   CURR_PORTFOLIO_LINK,
+  DERMATIFY_LINK,
+  INVITE_LINK,
   JWT_TEMPLATE_LINK,
+  NUBENGINE_LINK,
   OLD_PORTFOLIO_LINK,
   POMODORO_LINK,
   TODOLIST_API_LINK,
@@ -29,8 +32,8 @@ export const projects: Project[] = [
     id: 1,
     title: "Dermatify",
     description:
-      "A capstone project for Bangkit Academy 2024 that aims to increase awareness regarding skin issues and its treatments.",
-    link: "",
+      "A capstone project for Bangkit Academy 2024 that aims to increase skin issues awareness and its treatments.",
+    link: DERMATIFY_LINK,
     image: dermatify,
     technologies: [
       "HapiJS",
@@ -87,7 +90,7 @@ export const projects: Project[] = [
     title: "Invite",
     description:
       "A team-matcher project for the Software Engineering class for students to find teams to participate in a competition.",
-    link: "",
+    link: INVITE_LINK,
     image: invite,
     technologies: ["Django", "PostgreSQL", "TailwindCSS", "Docker", "GCP"],
   },
@@ -96,7 +99,7 @@ export const projects: Project[] = [
     title: "Nubengine",
     description:
       "A project for the Information Retrieval class utilizing TF-IDF for indexing and uses medical datasets from ir-datasets.",
-    link: "",
+    link: NUBENGINE_LINK,
     image: nubengine,
     technologies: ["Django", "TailwindCSS", "GCP"],
   },
