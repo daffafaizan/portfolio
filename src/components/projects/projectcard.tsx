@@ -59,7 +59,13 @@ export default function ProjectCard({ project }: { project: Project }) {
           quality={100}
           priority={true}
         />
+
         <div className="absolute bottom-5 right-5 px-3 py-2 sm:px-5 sm:py-3 bg-white rounded-2xl text-sm">
+          <div
+            className={`absolute -top-2 -left-2 p-2 border-[5px] border-white ${
+              project.status === "INACTIVE" ? "bg-[#FF3131]" : "bg-[#39FF14]"
+            } rounded-full text-sm`}
+          ></div>
           <div className="flex flex-row justify-between items-center gap-3 sm:gap-4">
             <span className="text-base sm:text-xl font-medium">
               {project.title}
