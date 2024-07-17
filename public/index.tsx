@@ -1,4 +1,4 @@
-import bangkit from "./Bangkit/bangkit.jpg";
+import bangkit from "./Bangkit/unnamed.png";
 import dermatify from "./Dermatify/Dermatify.png";
 import iisma from "./IISMA/IismaWhite.png";
 import invite from "./Invite/invite.png";
@@ -15,6 +15,10 @@ import todolistAPI from "./API/todolistapi.png";
 import jwttemplate from "./API/jwtexpress.png";
 import profilepicture from "./new_pp_large.jpg";
 import wallpaper from "./Misc/wp1.jpg";
+import peduly from "./Peduly/logo-peduly-2.png";
+import compfest from "./Compfest/compfestblack.png";
+import csui from "./CSUI/csuipng.png";
+import gdsc from "./GDSC/gdscLQ.png";
 
 export {
   bangkit,
@@ -34,4 +38,8 @@ export {
   jwttemplate,
   profilepicture,
   wallpaper,
+  peduly,
+  compfest,
+  csui,
+  gdsc,
 };
