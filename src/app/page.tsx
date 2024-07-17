@@ -2,7 +2,7 @@
 
 import AnimatedPage from "@/components/animations/animatedpage";
 import AboutMe from "@/components/main/aboutme";
-import Experience from "@/components/main/experience";
+import Experiences from "@/components/main/experiences";
 import Intro from "@/components/main/intro";
 import Projects from "@/components/main/projects";
 
@@ -12,7 +12,7 @@ export default function Home() {
       <main className="flex flex-col items-center p-4 mb-32">
         <Intro />
         <AboutMe />
-        <Experience />
+        <Experiences />
         <Projects />
       </main>
     </AnimatedPage>
