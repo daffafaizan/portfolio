@@ -8,7 +8,7 @@ export default function Command({
   setCommand: any;
 }) {
   return (
-    <div className="w-full flex flex-row bg-blue-400 gap-4">
+    <div className="w-full flex flex-row bg-blue-200 gap-4">
       <div>
         <span>visitor</span>
         <span>@</span>
