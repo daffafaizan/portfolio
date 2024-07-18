@@ -1,4 +1,12 @@
-export default function Command() {
+export default function Command({
+  handleEnter,
+  command,
+  setCommand,
+}: {
+  handleEnter: any;
+  command: any;
+  setCommand: any;
+}) {
   return (
     <div className="w-full flex flex-row bg-blue-400 gap-4">
       <div>
@@ -7,7 +15,14 @@ export default function Command() {
         <span>daffafaizan.com</span>
         <span>:$ ~</span>
       </div>
-      <input className="bg-white flex-grow" />
+      <form onSubmit={(e) => handleEnter(e)}>
+        <input
+          type="text"
+          className="bg-white flex-grow"
+          value={command}
+          onChange={(e) => setCommand(e.currentTarget.value)}
+        />
+      </form>
     </div>
   );
 }
