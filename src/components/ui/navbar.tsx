@@ -1,13 +1,20 @@
 "use client";
 
+import Cookies from "js-cookie";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 import { paths } from "@/data/paths";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  XMarkIcon,
+  CommandLineIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Navbar() {
-  const pathName = usePathname();
   const [showNavbar, setShowNavbar] = useState(false);
+  const terminalMode = () => {
+    Cookies.set("ui", "terminal");
+    window.location.reload();
+  };
   return (
     <>
       <div className="fixed flex flex-row items-center justify-between text-white top-0 h-16 z-40 w-full px-7 bg-[#101820]/20 backdrop-blur-md">
@@ -28,6 +35,11 @@ export default function Navbar() {
               </a>
             </div>
           ))}
+          <button onClick={terminalMode}>
+            <span className="hover:text-[#45b8ac] duration-150">
+              <CommandLineIcon className="block h-8 w-8" />
+            </span>
+          </button>
         </div>
         <div className="md:hidden flex flex-col justify-center items-center">
           {showNavbar ? (
@@ -56,6 +68,11 @@ export default function Navbar() {
               </a>
             </div>
           ))}
+          <button onClick={terminalMode}>
+            <span className="hover:text-[#45b8ac] duration-150">
+              <CommandLineIcon className="block h-8 w-8" />
+            </span>
+          </button>
         </div>
       </div>
     </>
