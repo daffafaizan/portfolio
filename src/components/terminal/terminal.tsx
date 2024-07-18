@@ -3,13 +3,18 @@ import Command from "./command";
 import History from "./history";
 import { HistoryInterface } from "@/interfaces/history";
 import Cookies from "js-cookie";
-import { commands, defaultHistory, results } from "@/data/commands";
+import {
+  commands,
+  defaultHistory,
+  results,
+  directories,
+} from "@/data/commands";
 import { projects } from "@/data/projects";
-import { Project } from "@/interfaces/project";
 
 export default function Terminal() {
   const [command, setCommand] = useState("");
   const [storage, setStorage] = useState<HistoryInterface[]>(defaultHistory);
+  const [currDir, setCurrDir] = useState("~");
   const commandResult = (input: string) => {
     switch (true) {
       case input === "help":
@@ -30,6 +35,21 @@ export default function Terminal() {
           return "visiting " + title + "...";
         } else {
           return "error: project " + title + " does not exist.";
+        }
+      case input.split(" ")[0] === "cd":
+        if (input.split(" ").length === 1) {
+          setCurrDir("~");
+          return "";
+        }
+        const name = command.split(" ")[1];
+        const directory = directories.filter(
+          (dir) => dir.toLowerCase() == name.toLowerCase(),
+        );
+        if (directory.length > 0) {
+          setCurrDir("~/" + name);
+          return "";
+        } else {
+          return "cd: no such file or directory: " + name;
         }
     }
   };
@@ -56,6 +76,7 @@ export default function Terminal() {
         const line = {
           command,
           result: result ? result : "",
+          currDir,
         };
         setStorage([...storage, line]);
       }
@@ -74,6 +95,7 @@ export default function Terminal() {
             handleEnter={handleEnter}
             command={command}
             setCommand={setCommand}
+            currDir={currDir}
           />
         </div>
       </div>

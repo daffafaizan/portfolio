@@ -2,10 +2,12 @@ export default function Command({
   handleEnter,
   command,
   setCommand,
+  currDir,
 }: {
   handleEnter: any;
-  command: any;
+  command: string;
   setCommand: any;
+  currDir: string;
 }) {
   const handleClick = () => {
     document.getElementById("cmd")?.focus();
@@ -16,7 +18,7 @@ export default function Command({
         <span className="text-sky-600">visitor</span>
         <span className="text-blue-300">@</span>
         <span className="text-green-500">daffafaizan.com</span>
-        <span className="text-blue-300">:$ ~</span>
+        <span className="text-blue-300">:$ {currDir}</span>
       </div>
       <form className="w-full" onSubmit={(e) => handleEnter(e)}>
         <input

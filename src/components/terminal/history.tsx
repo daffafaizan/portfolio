@@ -1,4 +1,5 @@
 import { HistoryInterface } from "@/interfaces/history";
+import { directories } from "@/data/commands";
 
 export default function History({ history }: { history: HistoryInterface }) {
   const zigZag = ["help", "projects"];
@@ -9,7 +10,7 @@ export default function History({ history }: { history: HistoryInterface }) {
           <span className="text-sky-600">visitor</span>
           <span className="text-blue-300">@</span>
           <span className="text-green-500">daffafaizan.com</span>
-          <span className="text-blue-300">:$ ~</span>
+          <span className="text-blue-300">:$ {history.currDir}</span>
         </div>
         {history.result.includes("command not found") ||
         history.result.includes("error") ? (
@@ -47,7 +48,12 @@ export default function History({ history }: { history: HistoryInterface }) {
       ) : (
         <div className="flex flex-col">
           {history.result.split("\n").map((line, index) => (
-            <span key={index} className="text-white">
+            <span
+              key={index}
+              className={`${
+                directories.includes(line) ? "text-blue-300" : "text-white"
+              }`}
+            >
               {line}
             </span>
           ))}
