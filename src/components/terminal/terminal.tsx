@@ -2,17 +2,38 @@ import { useState } from "react";
 import Command from "./command";
 import History from "./history";
 import { HistoryInterface } from "@/interfaces/history";
+import { commands } from "@/data/commands";
 
 export default function Terminal() {
   const [command, setCommand] = useState("");
   const [storage, setStorage] = useState<HistoryInterface[]>([]);
+  const commandResult = (input: string) => {
+    switch (true) {
+      case input === "help":
+        return "halo";
+      case input === "aboutme":
+        return "i am daffa";
+      case input === "clear":
+        return "clearing";
+    }
+  };
+  const checkCommand = (input: string) => {
+    if (commands.includes(input)) {
+      return commandResult(input);
+    } else {
+      return (
+        "shell: command not found: " + command + ". Try 'help' to get started."
+      );
+    }
+  };
   const handleEnter = (e: any) => {
     e.preventDefault();
 
     if (command !== "") {
+      const result = checkCommand(command);
       const line = {
         command,
-        result: "Test",
+        result: result ? result : "",
       };
       setStorage([...storage, line]);
     }
