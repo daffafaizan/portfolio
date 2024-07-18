@@ -13,8 +13,6 @@ export default function Terminal() {
         return "halo";
       case input === "aboutme":
         return "i am daffa";
-      case input === "clear":
-        return "clearing";
     }
   };
   const checkCommand = (input: string) => {
@@ -31,11 +29,15 @@ export default function Terminal() {
 
     if (command !== "") {
       const result = checkCommand(command);
-      const line = {
-        command,
-        result: result ? result : "",
-      };
-      setStorage([...storage, line]);
+      if (command === "clear") {
+        setStorage([]);
+      } else {
+        const line = {
+          command,
+          result: result ? result : "",
+        };
+        setStorage([...storage, line]);
+      }
     }
     setCommand("");
   };
