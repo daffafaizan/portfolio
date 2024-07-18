@@ -18,7 +18,7 @@ export default function Command({
       <form onSubmit={(e) => handleEnter(e)}>
         <input
           type="text"
-          className="bg-white flex-grow"
+          className="bg-white"
           value={command}
           onChange={(e) => setCommand(e.currentTarget.value)}
         />
