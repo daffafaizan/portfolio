@@ -3,14 +3,11 @@ import Command from "./command";
 import History from "./history";
 import { HistoryInterface } from "@/interfaces/history";
 import Cookies from "js-cookie";
-import { commands, results } from "@/data/commands";
-import { useRouter } from "next/navigation";
+import { commands, defaultHistory, results } from "@/data/commands";
 
 export default function Terminal() {
-  const router = useRouter();
   const [command, setCommand] = useState("");
-  const [storage, setStorage] = useState<HistoryInterface[]>([]);
-
+  const [storage, setStorage] = useState<HistoryInterface[]>(defaultHistory);
   const commandResult = (input: string) => {
     switch (true) {
       case input === "help":
@@ -55,9 +52,9 @@ export default function Terminal() {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col p-2 text-sm">
+    <div className="w-screen h-screen flex flex-col p-2 text-xs md:text-sm">
       <div className="w-full h-full border-2 border-sky-800 rounded-md">
-        <div className="w-full h-full p-5 overflow-x-scroll">
+        <div className="w-full h-full p-3 md:p-5 overflow-x-scroll">
           {storage.map((history: any, index: any) => (
             <History key={index} history={history} />
           ))}
