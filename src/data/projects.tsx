@@ -30,6 +30,7 @@ import {
 export const projects: Project[] = [
   {
     id: 1,
+    code: "dermatify",
     title: "Dermatify",
     description:
       "A capstone project for Bangkit Academy 2024 that aims to increase skin issues awareness and its treatments.",
@@ -47,6 +48,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    code: "vlecture",
     title: "Vlecture",
     description:
       "A PWA that helps students record lectures and transforms them into notes, flashcards, and quizzes.",
@@ -64,6 +66,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    code: "todolist",
     title: "Todolist",
     description:
       "A full stack web application featuring JWT authentication, priority flags, and task manipulation capabilities.",
@@ -81,7 +84,8 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Pomodoro",
+    code: "pomotimer",
+    title: "Pomotimer",
     description:
       "A productivity tool utilizing the pomodoro technique featuring a soothing alarm to keep you focused.",
     link: POMODORO_LINK,
@@ -91,6 +95,7 @@ export const projects: Project[] = [
   },
   {
     id: 5,
+    code: "invite",
     title: "Invite",
     description:
       "A team-matcher project for the Software Engineering class for students to find teams to participate in a competition.",
@@ -101,6 +106,7 @@ export const projects: Project[] = [
   },
   {
     id: 6,
+    code: "nubengine",
     title: "Nubengine",
     description:
       "A project for the Information Retrieval class utilizing TF-IDF for indexing and uses medical datasets from ir-datasets.",
@@ -111,6 +117,7 @@ export const projects: Project[] = [
   },
   {
     id: 7,
+    code: "oldportfolio",
     title: "Daffa's",
     description:
       "My first iteration of a portfolio website featuring finished projects, experiences, technologies, and socials.",
@@ -121,6 +128,7 @@ export const projects: Project[] = [
   },
   {
     id: 8,
+    code: "fahdsportfolio",
     title: "Fahd's",
     description:
       "For my brother, a website to share his experiences, achievements, and opinions.",
@@ -131,6 +139,7 @@ export const projects: Project[] = [
   },
   {
     id: 9,
+    code: "blogapi",
     title: "Blog API",
     description:
       "The back end REST API for my portfolio's blog section utilizing gin.",
@@ -141,6 +150,7 @@ export const projects: Project[] = [
   },
   {
     id: 10,
+    code: "todolistapi",
     title: "Todolist API",
     description:
       "The back end REST API for my todolist app that utilizes ExpressJS features JWT authentication.",
@@ -151,6 +161,7 @@ export const projects: Project[] = [
   },
   {
     id: 11,
+    code: "portfolio",
     title: "Portfolio",
     description: "My current portfolio website.",
     link: CURR_PORTFOLIO_LINK,
@@ -160,6 +171,7 @@ export const projects: Project[] = [
   },
   {
     id: 12,
+    code: "jwttemplate",
     title: "JWT Template",
     description:
       "A public ExpressJS template for JWT authentication and authorization featuring basic user management.",
