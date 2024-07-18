@@ -2,17 +2,22 @@ import { useState } from "react";
 import Command from "./command";
 import History from "./history";
 import { HistoryInterface } from "@/interfaces/history";
-import { commands } from "@/data/commands";
+import { commands, results } from "@/data/commands";
 
 export default function Terminal() {
   const [command, setCommand] = useState("");
   const [storage, setStorage] = useState<HistoryInterface[]>([]);
+
   const commandResult = (input: string) => {
     switch (true) {
       case input === "help":
-        return "halo";
+        return results.help;
+      case input === "ls":
+        return results.ls;
       case input === "aboutme":
-        return "i am daffa";
+        return results.aboutme;
+      case input === "projects":
+        return results.projects;
     }
   };
   const checkCommand = (input: string) => {
@@ -32,6 +37,7 @@ export default function Terminal() {
       if (command === "clear") {
         setStorage([]);
       } else {
+        console.log(result);
         const line = {
           command,
           result: result ? result : "",
@@ -41,6 +47,7 @@ export default function Terminal() {
     }
     setCommand("");
   };
+
   return (
     <div className="w-screen h-screen flex flex-col p-5 text-sm">
       {storage.map((history: any, index: any) => (

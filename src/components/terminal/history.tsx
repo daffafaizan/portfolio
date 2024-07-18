@@ -2,7 +2,7 @@ import { HistoryInterface } from "@/interfaces/history";
 
 export default function History({ history }: { history: HistoryInterface }) {
   return (
-    <div className="w-full flex flex-col gap-1 mb-4">
+    <div className="w-full flex flex-col mb-4">
       <div className="flex flex-row gap-2">
         <div>
           <span className="text-sky-800">visitor</span>
@@ -12,7 +12,13 @@ export default function History({ history }: { history: HistoryInterface }) {
         </div>
         <span className="text-white">{history.command}</span>
       </div>
-      <span className="text-white">{history.result}</span>
+      <div className="flex flex-col">
+        {history.result.split("\n").map((line, index) => (
+          <span key={index} className="text-white">
+            {line}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
