@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import "./global.css";
-import { Anonymous_Pro } from "next/font/google";
-import Navbar from "@/components/ui/navbar";
-import Footer from "@/components/ui/footer";
+import { Anonymous_Pro, JetBrains_Mono } from "next/font/google";
+import Interface from "./interface";
 
 const inter = Anonymous_Pro({
   weight: ["400", "700"],
   subsets: ["latin"],
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["cyrillic"],
 });
 
 export const metadata: Metadata = {
@@ -24,11 +27,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="./favicon.ico" sizes="any" />
       </head>
-      <body className={`${inter.className} bg-[#101820]`}>
-        <Navbar />
+      <Interface terminalFont={mono} normalFont={inter}>
         {children}
-        <Footer />
-      </body>
+      </Interface>
     </html>
   );
 }
