@@ -2,9 +2,12 @@ import { useState } from "react";
 import Command from "./command";
 import History from "./history";
 import { HistoryInterface } from "@/interfaces/history";
+import Cookies from "js-cookie";
 import { commands, results } from "@/data/commands";
+import { useRouter } from "next/navigation";
 
 export default function Terminal() {
+  const router = useRouter();
   const [command, setCommand] = useState("");
   const [storage, setStorage] = useState<HistoryInterface[]>([]);
 
@@ -36,6 +39,9 @@ export default function Terminal() {
       const result = checkCommand(command);
       if (command === "clear") {
         setStorage([]);
+      } else if (command === "gui") {
+        Cookies.set("ui", "gui");
+        window.location.reload();
       } else {
         console.log(result);
         const line = {
@@ -49,15 +55,17 @@ export default function Terminal() {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col p-5 text-sm">
-      {storage.map((history: any, index: any) => (
-        <History key={index} history={history} />
-      ))}
-      <Command
-        handleEnter={handleEnter}
-        command={command}
-        setCommand={setCommand}
-      />
+    <div className="w-screen h-screen flex flex-col p-2 text-sm">
+      <div className="w-full h-full p-5 border-2 border-sky-800 rounded-md">
+        {storage.map((history: any, index: any) => (
+          <History key={index} history={history} />
+        ))}
+        <Command
+          handleEnter={handleEnter}
+          command={command}
+          setCommand={setCommand}
+        />
+      </div>
     </div>
   );
 }
