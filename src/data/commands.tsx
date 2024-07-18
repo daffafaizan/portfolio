@@ -1,7 +1,20 @@
 import { HistoryInterface } from "@/interfaces/history";
 
 const commands = ["help", "clear", "ls", "cd", "visit", "aboutme", "projects"];
-const directories = ["welcome", "classified", "mp4"];
+const directories = [
+  {
+    title: "welcome",
+    content: "test1",
+  },
+  {
+    title: "classified",
+    content: "test2",
+  },
+  {
+    title: "mp4",
+    content: "test3",
+  },
+];
 const defaultHistory: HistoryInterface[] = [
   {
     command: "Welcome",

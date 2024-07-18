@@ -51,7 +51,9 @@ export default function History({ history }: { history: HistoryInterface }) {
             <span
               key={index}
               className={`${
-                directories.includes(line) ? "text-blue-300" : "text-white"
+                directories.filter((dir) => dir.title === line).length > 0
+                  ? "text-blue-300"
+                  : "text-white"
               }`}
             >
               {line}

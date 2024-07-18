@@ -43,7 +43,7 @@ export default function Terminal() {
         }
         const name = command.split(" ")[1];
         const directory = directories.filter(
-          (dir) => dir.toLowerCase() == name.toLowerCase(),
+          (dir) => dir.title.toLowerCase() == name.toLowerCase(),
         );
         if (directory.length > 0) {
           setCurrDir("~/" + name);
