@@ -1,5 +1,5 @@
 import { HistoryInterface } from "@/interfaces/history";
-import { directories } from "@/data/commands";
+import { rootDirectories } from "@/data/commands";
 
 export default function History({ history }: { history: HistoryInterface }) {
   const zigZag = ["help", "projects"];
@@ -51,7 +51,7 @@ export default function History({ history }: { history: HistoryInterface }) {
             <span
               key={index}
               className={`${
-                directories.filter((dir) => dir.title === line).length > 0
+                rootDirectories.filter((dir) => dir.title === line).length > 0
                   ? "text-blue-300"
                   : "text-white"
               }`}

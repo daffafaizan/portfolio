@@ -1,7 +1,7 @@
 import { HistoryInterface } from "@/interfaces/history";
 
 const commands = ["help", "clear", "ls", "cd", "visit", "aboutme", "projects"];
-const directories = [
+const rootDirectories = [
   {
     title: "welcome",
     content: "test1",
@@ -31,4 +31,4 @@ const results = {
     "dermatify\n\xa0\xa0-> skin analysis application\nvlecture\n\xa0\xa0-> lecture and note-taking companion\ntodolist\n\xa0\xa0-> full-stack task management app\npomotimer\n\xa0\xa0-> pomodoro timer for productivity\ninvite\n\xa0\xa0-> team-matching app\nnubengine\n\xa0\xa0-> medical dataset search engine\noldportfolio\n\xa0\xa0-> my first iteration of a portfolio\nfahdsportfolio\n\xa0\xa0-> a personal website for my brother\nportfolio\n\xa0\xa0-> the website you're accessing now!\nblogapi\n\xa0\xa0-> back-end for the blog section\ntodolistapi\n\xa0\xa0-> back-end for the todolist app\njwttemplate\n\xa0\xa0-> expressjs jwt template",
 };
 
-export { commands, results, defaultHistory, directories };
+export { commands, results, defaultHistory, rootDirectories };

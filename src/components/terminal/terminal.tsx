@@ -7,7 +7,7 @@ import {
   commands,
   defaultHistory,
   results,
-  directories,
+  rootDirectories,
 } from "@/data/commands";
 import { projects } from "@/data/projects";
 
@@ -20,7 +20,24 @@ export default function Terminal() {
       case input === "help":
         return results.help;
       case input === "ls":
-        return results.ls;
+        const dir = currDir.split("/")[1];
+        if (!dir) {
+          return results.ls;
+        }
+        let directory: any[] = [];
+        switch (true) {
+          case dir === "~":
+            directory = rootDirectories.filter(
+              (dir) => dir.title.toLowerCase() == name.toLowerCase(),
+            );
+          case dir === "welcome":
+            return "hello.txt";
+          case dir === "classified":
+            return "secret.txt";
+          case dir === "mp4":
+            return "link.txt";
+        }
+        return directory[0].content;
       case input === "aboutme":
         return results.aboutme;
       case input === "projects":
@@ -41,15 +58,20 @@ export default function Terminal() {
           setCurrDir("~");
           return "";
         }
+        const cur = currDir.length === 1 ? "~" : currDir.split("/")[1];
         const name = command.split(" ")[1];
-        const directory = directories.filter(
-          (dir) => dir.title.toLowerCase() == name.toLowerCase(),
-        );
-        if (directory.length > 0) {
-          setCurrDir("~/" + name);
-          return "";
-        } else {
-          return "cd: no such file or directory: " + name;
+        switch (true) {
+          case cur === "~":
+            const dire = rootDirectories.filter(
+              (dir) => dir.title.toLowerCase() == name.toLowerCase(),
+            );
+            if (dire.length > 0) {
+              setCurrDir("~/" + name);
+              return "";
+            }
+            return "cd: no such file or directory: " + name;
+          default:
+            return "cd: no such file or directory: " + name;
         }
     }
   };
