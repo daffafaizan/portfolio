@@ -6,12 +6,32 @@ export default function History({ history }: { history: HistoryInterface }) {
     <div className="w-full flex flex-col mb-4">
       <div className="flex flex-row gap-2">
         <div className="whitespace-nowrap">
-          <span className="text-sky-800">visitor</span>
+          <span className="text-sky-600">visitor</span>
           <span className="text-blue-300">@</span>
-          <span className="text-emerald-800">daffafaizan.com</span>
+          <span className="text-green-500">daffafaizan.com</span>
           <span className="text-blue-300">:$ ~</span>
         </div>
-        <span className="text-white">{history.command}</span>
+        {history.result.includes("command not found") ||
+        history.result.includes("error") ? (
+          <span className="text-red-700">{history.command}</span>
+        ) : (
+          <>
+            {history.command.length > 1 ? (
+              <>
+                <span className="text-green-500">
+                  {history.command.split(" ")[0]}
+                </span>
+                <span className="text-white">
+                  {history.command.split(" ")[1]}
+                </span>
+              </>
+            ) : (
+              <span className="text-green-500">
+                {history.command.split(" ")[0]}
+              </span>
+            )}
+          </>
+        )}
       </div>
       {zigZag.includes(history.command) ? (
         <div className="flex flex-col">

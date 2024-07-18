@@ -13,9 +13,9 @@ export default function Command({
   return (
     <div onClick={handleClick} className="h-full w-full flex flex-row gap-2">
       <div className="whitespace-nowrap">
-        <span className="text-sky-800">visitor</span>
+        <span className="text-sky-600">visitor</span>
         <span className="text-blue-300">@</span>
-        <span className="text-emerald-800">daffafaizan.com</span>
+        <span className="text-green-500">daffafaizan.com</span>
         <span className="text-blue-300">:$ ~</span>
       </div>
       <form className="w-full" onSubmit={(e) => handleEnter(e)}>
