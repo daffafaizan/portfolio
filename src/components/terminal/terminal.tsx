@@ -56,15 +56,17 @@ export default function Terminal() {
 
   return (
     <div className="w-screen h-screen flex flex-col p-2 text-sm">
-      <div className="w-full h-full p-5 border-2 border-sky-800 rounded-md">
-        {storage.map((history: any, index: any) => (
-          <History key={index} history={history} />
-        ))}
-        <Command
-          handleEnter={handleEnter}
-          command={command}
-          setCommand={setCommand}
-        />
+      <div className="w-full h-full border-2 border-sky-800 rounded-md">
+        <div className="w-full h-full p-5 overflow-x-scroll">
+          {storage.map((history: any, index: any) => (
+            <History key={index} history={history} />
+          ))}
+          <Command
+            handleEnter={handleEnter}
+            command={command}
+            setCommand={setCommand}
+          />
+        </div>
       </div>
     </div>
   );

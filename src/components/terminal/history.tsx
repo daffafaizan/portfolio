@@ -4,7 +4,7 @@ export default function History({ history }: { history: HistoryInterface }) {
   return (
     <div className="w-full flex flex-col mb-4">
       <div className="flex flex-row gap-2">
-        <div>
+        <div className="whitespace-nowrap">
           <span className="text-sky-800">visitor</span>
           <span className="text-blue-300">@</span>
           <span className="text-emerald-800">daffafaizan.com</span>
