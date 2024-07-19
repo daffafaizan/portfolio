@@ -8,6 +8,7 @@ import {
   defaultHistory,
   results,
   rootDirectories,
+  socials,
 } from "@/data/commands";
 import { projects } from "@/data/projects";
 
@@ -47,11 +48,17 @@ export default function Terminal() {
         const project = projects.filter(
           (project) => project.code.toLowerCase() == title.toLowerCase(),
         );
+        const socmed = socials.filter(
+          (soc) => soc.title.toLowerCase() == title.toLowerCase(),
+        );
         if (project.length > 0) {
           window.open(project[0].link, "_blank");
           return "visiting " + title + "...";
+        } else if (socmed.length > 0) {
+          window.open(socmed[0].link, "_blank");
+          return "visiting " + title + "...";
         } else {
-          return "error: project " + title + " does not exist.";
+          return "error: project or social media " + title + " does not exist.";
         }
       case input.split(" ")[0] === "cd":
         if (input.split(" ").length === 1) {
@@ -73,6 +80,8 @@ export default function Terminal() {
           default:
             return "cd: no such file or directory: " + name;
         }
+      case input === "socials":
+        return results.socials;
     }
   };
   const checkCommand = (input: string) => {
