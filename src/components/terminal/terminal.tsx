@@ -97,15 +97,15 @@ export default function Terminal() {
     e.preventDefault();
 
     if (command !== "") {
-      let result = checkCommand(command);
-      if (command === "clear") {
+      let result = checkCommand(command.toLowerCase());
+      if (command.toLowerCase() === "clear") {
         setStorage([]);
-      } else if (command === "gui") {
+      } else if (command.toLowerCase() === "gui") {
         Cookies.set("ui", "gui");
         window.location.reload();
       } else {
         const line = {
-          command,
+          command: command.toLowerCase(),
           result: result ? result : "",
           currDir,
         };
