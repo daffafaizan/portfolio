@@ -1,14 +1,6 @@
 import Link from "next/link";
 import AnimatedDiv from "../animations/animateddiv";
-
-interface BlogPreviewProps {
-  slug: string;
-  title: string;
-  summary: string;
-  createdAt: string;
-  postAuthor: any;
-  tags: any;
-}
+import { BlogPreviewProps } from "@/interfaces/blog";
 
 export default function BlogPreview({
   slug,
