@@ -1,4 +1,4 @@
-# Daffa's Portfolio Website
+# Daffa's Portfolio Website (Outdated README)
 
 Welcome to the GitHub repository for my personal portfolio website! This website serves as a showcase of my skills, projects, and blog posts. As a Full Stack Developer, I've designed this platform to not only highlight my expertise but also to provide insights into my journey in the world of technology.
 
