@@ -1,6 +1,14 @@
 import Link from "next/link";
 import AnimatedDiv from "../animations/animateddiv";
-import { BlogPreviewProps } from "@/interfaces/blog";
+
+interface BlogPreviewProps {
+  slug: string;
+  title: string;
+  summary: string;
+  createdAt: string;
+  postAuthor: any;
+  tags: any;
+}
 
 export default function BlogPreview({
   slug,
@@ -18,9 +26,6 @@ export default function BlogPreview({
   });
   return (
     <AnimatedDiv className="relative w-full">
-      <div className="absolute top-2 left-2 z-10 h-56 w-full rounded-sm bg-white">
-        Test
-      </div>
       <div className="absolute flex z-20 flex-col justify-center h-56 w-full rounded-sm gap-2 p-4 border border-white bg-[#101820]">
         <span className="text-sm text-gray-600 font-light">
           {formattedDate} by {postAuthor}
