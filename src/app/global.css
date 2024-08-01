@@ -13,3 +13,8 @@
 ::-webkit-scrollbar-track {
   @apply bg-transparent;
 }
+
+input,
+textarea {
+  color: #1f2937;
+}

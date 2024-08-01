@@ -21,10 +21,14 @@ export default function AllBlogs() {
   }, [getPosts]);
   return (
     <AnimatedDiv className="min-h-screen w-full sm:w-5/6 flex flex-col items-center mt-16 px-2 pb-4">
-      <AnimatedDiv className="w-full text-left mb-4 sm:mb-8">
-        <span className="text-3xl sm:text-5xl lg:text-7xl font-semibold text-white">
-          Blogs
-        </span>
+      <AnimatedDiv className="w-full flex flex-row items-center text-left mb-4 sm:mb-8 font-semibold text-white">
+        <span className="text-3xl sm:text-5xl lg:text-7xl">Blogs</span>
+        <button
+          type="submit"
+          className="ml-auto border border-white text-white hover:bg-[#45b8ac] hover:text-white hover:border-[#101820] duration-150 rounded-full px-3 py-2 text-base"
+        >
+          Create a post.
+        </button>
       </AnimatedDiv>
       {isLoading ? (
         <div className="absolute w-full h-screen flex flex-col justify-center items-center -mt-16">
