@@ -19,9 +19,8 @@ export default function BlogPreview({
   tags,
 }: BlogPreviewProps) {
   const formattedDate = new Date(createdAt).toLocaleDateString("en-GB", {
-    weekday: "long",
-    day: "numeric",
     month: "long",
+    day: "numeric",
     year: "numeric",
   });
   return (
@@ -30,7 +29,7 @@ export default function BlogPreview({
         <span className="text-sm text-gray-600 font-light">
           {formattedDate} by {postAuthor}
         </span>
-        <span className="text-lg text-white font-semibold underline underline-offset-4 decoration-white -my-2">
+        <span className="text-lg text-white font-bold decoration-white -my-2">
           {title}
         </span>
         <span className="text-sm text-white my-2">{summary}</span>
