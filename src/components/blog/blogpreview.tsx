@@ -24,8 +24,8 @@ export default function BlogPreview({
     year: "numeric",
   });
   return (
-    <AnimatedDiv className="relative w-full">
-      <div className="absolute flex z-20 flex-col justify-center h-56 w-full rounded-sm gap-2 p-4 border border-white bg-[#101820]">
+    <AnimatedDiv className="relative h-60 w-full">
+      <div className="absolute flex z-20 flex-col justify-center h-full w-full rounded-md gap-2 p-4 border border-gray-700 bg-[#101820]">
         <span className="text-sm text-gray-600 font-light">
           {formattedDate} by {postAuthor}
         </span>
