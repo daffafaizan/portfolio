@@ -43,6 +43,8 @@ export default function Terminal() {
         return results.aboutme;
       case input === "projects":
         return results.projects;
+      case input === "blog":
+        return results.blog;
       case input.split(" ")[0] === "visit":
         const title = command.split(" ")[1];
         const project = projects.filter(
