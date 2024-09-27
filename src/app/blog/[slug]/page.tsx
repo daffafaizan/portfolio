@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { BiComment } from "react-icons/bi";
+import { LiaToggleOffSolid, LiaToggleOnSolid } from "react-icons/lia";
 import { RxPerson } from "react-icons/rx";
 import Markdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -16,6 +17,7 @@ interface PostData {
   slug: string;
   summary: string;
   content: string;
+  aiContent: string;
   createdAt: string;
   postAuthor: string;
   tags: string[];
@@ -27,6 +29,7 @@ const initialPostData: PostData = {
   slug: "",
   summary: "",
   content: "",
+  aiContent: "",
   createdAt: "",
   postAuthor: "",
   tags: [],
@@ -40,6 +43,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
   const [data, setData] = useState<PostData>(initialPostData);
   const [name, setName] = useState("");
   const [content, setContent] = useState("");
+  const [showAI, setShowAI] = useState(false);
   const handleSubmit = async () => {
     event?.preventDefault();
     let commentAuthor;
@@ -104,6 +108,10 @@ export default function Blog({ params }: { params: { slug: string } }) {
               <span className="pl-2 text-gray-600">
                 {formatDate(data.createdAt)}
               </span>
+              <span className="text-sm ml-auto">
+                AI Version
+              </span>
+              {showAI ? <LiaToggleOnSolid className="ml-2 h-8 w-8 cursor-pointer" onClick={() => setShowAI(!showAI)}/> : <LiaToggleOffSolid className="ml-2 h-8 w-8 cursor-pointer"onClick={() => setShowAI(!showAI)}/>}
             </div>
             <Markdown
               className="text-justify text-sm mt-2"
@@ -128,7 +136,11 @@ export default function Blog({ params }: { params: { slug: string } }) {
                 },
               }}
             >
-              {data.content}
+              {showAI ? (data.aiContent == "" ? (
+              "AI version unavailable."
+              ) : (
+              data.aiContent
+              )) : data.content}
             </Markdown>
             <hr className="my-2" />
             <div className="w-full flex flex-row p-1">
