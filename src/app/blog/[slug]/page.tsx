@@ -88,6 +88,9 @@ export default function Blog({ params }: { params: { slug: string } }) {
       .then((response) => response.json())
       .then((data) => {
         setData(data);
+        if (data.aiContent) {
+          setShowAI(true)
+        }
       });
   }, [getUrl]);
   useEffect(() => {
