@@ -19,8 +19,8 @@ export default function Interface({
   useEffect(() => {
     const cookie = Cookies.get("ui");
     if (cookie == null) {
-      Cookies.set("ui", "terminal");
-      setUI("terminal");
+      Cookies.set("ui", "gui");
+      setUI("gui");
     } else {
       setUI(cookie);
     }
